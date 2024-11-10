@@ -1,0 +1,375 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+
+.navbar {
+    background: linear-gradient(rgb(246, 115, 67), white, rgb(62, 249, 62));
+    border-bottom: 0.5px solid black;
+    width: 100%;
+}
+
+.navLogo {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    cursor: pointer;
+}
+
+.navLogo a {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navLogo img {
+    width: 80px;
+}
+
+.navLogo p {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: bold;
+    color: navy;
+}
+
+.nav-item a {
+    color: black;
+    font-size: 1rem;
+}
+
+.nav-item a:hover,
+:focus {
+    color: red;
+    text-decoration: underline;
+}
+
+.dropdown-menu {
+    background-color: whitesmoke;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(236, 235, 235);
+}
+
+.searchForm button {
+    border: 3px solid green;
+    border-radius: 7px;
+}
+
+.searchForm input {
+    border: 2px solid green;
+}
+
+/* Header */
+
+header {
+    background-color: whitesmoke;
+}
+
+.headerInfo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 4rem 0;
+    justify-content: space-evenly;
+}
+
+.headerImg img {
+    border-radius: 30px;
+    width: 30rem;
+    flex-grow: 1;
+}
+
+.headerTitle {
+    align-content: center;
+    justify-content: center;
+}
+
+.mainTitle {
+    color: navy;
+    text-align: center;
+}
+
+#p1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+#p2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: orangered;
+    margin: 0;
+    padding: 0;
+}
+
+.headerTitle button {
+    border-radius: 10px;
+    color: navy;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+    border-color: navy;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.headerTitle button:hover {
+    color: white;
+    background-color: navy;
+}
+
+
+/* Footer */
+
+footer {
+    border-top: 2px solid black;
+    padding: 1rem 2rem;
+    background: linear-gradient(black, black);
+    border-radius: 2rem 2rem 0 0;
+    margin-top: 10rem;
+}
+
+.footer1 {
+    display: flex;
+    border-bottom: 1px solid whitesmoke;
+    flex-wrap: wrap;
+}
+
+.titleAndQuote {
+    padding: 2rem;
+    /* border: 1px solid white; */
+    width: 40%;
+    margin-right: 5rem;
+}
+
+.footer1sub {
+    padding: 2rem 1rem;
+    /* border: 1px solid white; */
+    flex-grow: 1;
+}
+
+#footerTitle {
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+
+#footerQuote {
+    text-align: justify;
+    color: whitesmoke;
+}
+
+.footer1sub p {
+    margin: 0.3rem 0 0 0;
+    color: whitesmoke;
+    opacity: 0.7;
+}
+
+.footer1sub p:hover {
+    opacity: 1;
+}
+
+.footerLinksHeading {
+    font-size: 1.5rem;
+    color: red !important;
+    margin-bottom: 1rem !important;
+    opacity: 1 !important;
+}
+
+.footer2 {
+    text-align: center;
+    padding-top: 1rem;
+    color: whitesmoke;
+}
+
+
+/* Media Queries */
+
+@media (992px <=width < 1200px) {
+    .searchForm {
+        display: none !important;
+    }
+
+    .navbar {
+        padding: 0 30px 0 30px !important;
+
+    }
+
+    .headerImg img {
+        width: 25rem;
+    }
+
+    #p1 {
+        font-size: 2rem;
+
+    }
+
+    #p2 {
+        font-size: 3rem;
+
+    }
+
+    .headerTitle button {
+        font-size: 1rem;
+        padding: 0.2rem 1rem;
+
+    }
+    .titleAndQuote {
+        padding: 2rem;
+        width: 50%;
+        margin-right: 5rem;
+    }
+    
+    .footer1sub {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (700px <=width < 992px) {
+    .navbar {
+        padding: 0 20px 0 20px !important;
+    }
+
+    .headerImg img {
+        width: 20rem;
+    }
+
+    #p1 {
+        font-size: 1.5rem;
+
+    }
+
+    #p2 {
+        font-size: 2.5rem;
+
+    }
+
+    .headerTitle button {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+
+    }
+
+    .headerInfo {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .titleAndQuote {
+        padding: 2rem;
+        width: 70%;
+        margin-right: 5rem;
+    }
+    
+    .footer1sub {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (500px <=width < 700px) {
+    .headerImg img {
+        width: 15rem;
+    }
+
+    #p1 {
+        font-size: 1.2rem;
+
+    }
+
+    #p2 {
+        font-size: 2rem;
+
+    }
+
+    .headerTitle button {
+        font-size: 1rem;
+        padding: 0.1rem 0.3rem;
+
+    }
+
+    .headerInfo {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .titleAndQuote {
+        padding: 2rem 0;
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .footer1sub {
+        padding: 2rem 3rem 2rem 0;
+    }
+
+}
+
+@media (width < 500px) {
+    .navbar {
+        padding: 0 0 0 3px !important;
+    }
+
+    .navLogo {
+        margin-left: 2px !important;
+    }
+
+    .headerImg img {
+        width: 20rem;
+    }
+
+    #p1 {
+        font-size: 1.5rem;
+
+    }
+
+    #p2 {
+        font-size: 2rem;
+
+    }
+
+    .headerTitle button {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+
+    }
+
+    .headerInfo {
+        padding: 2rem 1rem;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    footer {
+        padding: 1rem;
+        border-radius: 1rem;
+
+    }
+    .titleAndQuote {
+        padding: 2rem 0;
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .footer1sub {
+        padding: 2rem 1rem 2rem 0;
+        flex-grow: 1;
+    }
+    #footerTitle {
+        color: whitesmoke;
+        font-size: 2rem;
+    }
+    .footerLinksHeading {
+        font-size: 1.2rem;
+    }
+}
