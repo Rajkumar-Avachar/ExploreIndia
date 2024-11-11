@@ -10,7 +10,8 @@ a {
 /* Navbar */
 
 .navbar {
-    background: linear-gradient(rgb(246, 115, 67), white, rgb(62, 249, 62));
+    /* background: linear-gradient(rgb(246, 115, 67), white, rgb(62, 249, 62)); */
+    background-color: blue;
     border-bottom: 0.5px solid black;
     width: 100%;
 }
@@ -138,7 +139,7 @@ header {
 
 .footer {
     background-color: black;
-    margin-top: 10rem;
+    margin-top: 30rem;
     border-radius: 2rem;
 }
 
