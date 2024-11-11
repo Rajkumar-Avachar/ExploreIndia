@@ -11,16 +11,5 @@
             "src": "/(.*)",
             "dest": "/"
         }
-    ],
-    "headers": [
-        {
-            "source": "/(.*).css",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache, no-store, must-revalidate"
-                }
-            ]
-        }
     ]
 }
