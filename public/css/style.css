@@ -139,6 +139,7 @@ header {
 .footer {
     background-color: black;
     margin-top: 10rem;
+    border-radius: 2rem;
 }
 
 .footer1 {
@@ -147,7 +148,7 @@ header {
     flex-wrap: wrap;
     padding: 3rem;
     gap: 3rem;
-    background-color: black;
+    /* background-color: black; */
 }
 
 h4 {
