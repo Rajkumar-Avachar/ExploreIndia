@@ -73,7 +73,7 @@ a {
 /* Header */
 
 header {
-    background-color: yellow;
+    background-color: rgb(255, 0, 174);
 }
 
 .headerInfo {
@@ -139,7 +139,6 @@ header {
 .footer {
     background-color: black;
     margin-top: 30rem;
-    border-radius: 2rem;
 }
 
 .footer1 {
