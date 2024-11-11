@@ -139,37 +139,56 @@ header {
 .footer {
     background-color: black;
 }
+
 .footer1 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 3rem;
     gap: 3rem;
+    background-color: black;
 }
+
 h4 {
     color: whitesmoke;
 }
-h4 + p {
+
+h4+p {
     max-width: 25rem;
     margin-top: 1rem;
     text-align: justify;
     color: whitesmoke;
     opacity: 0.7;
 }
+
 .footer1 .links {
     padding-left: 2px;
     margin-top: 1rem;
 }
+
 .footer1 .links li {
     list-style: none;
     color: whitesmoke;
     opacity: 0.8;
 }
-.footer1 .links li a{
+
+.footer1 .links li a {
     text-decoration: none;
     color: whitesmoke;
     opacity: 0.8;
 }
-.footer1 .links li a:hover{
+
+.footer1 .links li a:hover {
     opacity: 1;
+}
+
+.footer2 {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid white;
+}
+.footer2 p{
+    margin: 0;
+    padding: 0;
+    color: white;
 }
