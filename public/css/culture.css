@@ -7,6 +7,8 @@ a {
     text-decoration: none;
 }
 
+/* Religions */
+
 .mainHeading {
     margin: 3rem;
     background-color: burlywood;
@@ -51,6 +53,10 @@ hr {
     width: 90%;
     margin: auto;
 }
+
+/* Festivals */
+
+
 
 /* Media Queries */
 

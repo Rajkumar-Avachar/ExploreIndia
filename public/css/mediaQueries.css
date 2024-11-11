@@ -6,10 +6,28 @@
     .navbar {
         padding: 0 30px 0 30px !important;
     }
+}
 
-    .headerImg img {
-        width: 25rem;
+@media (700px <=width < 992px) {
+    .navbar {
+        padding: 0 20px 0 20px !important;
     }
+
+    #p1 {
+        font-size: 2.2rem;
+    }
+
+    #p2 {
+        font-size: 3.2rem;
+    }
+
+    .headerInfo button {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+@media (500px <=width < 700px) {
 
     #p1 {
         font-size: 2rem;
@@ -19,61 +37,18 @@
         font-size: 3rem;
     }
 
-    .headerTitle button {
-        font-size: 1rem;
-        padding: 0.2rem 1rem;
-    }
-}
-
-@media (700px <=width < 992px) {
-    .navbar {
-        padding: 0 20px 0 20px !important;
-    }
-
-    .headerImg img {
-        width: 20rem;
-    }
-
-    #p1 {
-        font-size: 1.5rem;
-    }
-
-    #p2 {
-        font-size: 2.5rem;
-    }
-
-    .headerTitle button {
+    .headerInfo button {
         font-size: 1rem;
         padding: 0.2rem 0.5rem;
     }
-
+    .slidingImages {
+        min-width: 20rem;
+    }
+    .slidingImages img {
+        height: 20rem;
+    }
     .headerInfo {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
-
-@media (500px <=width < 700px) {
-    .headerImg img {
-        width: 15rem;
-    }
-
-    #p1 {
-        font-size: 1.2rem;
-    }
-
-    #p2 {
-        font-size: 2rem;
-    }
-
-    .headerTitle button {
-        font-size: 1rem;
-        padding: 0.1rem 0.3rem;
-    }
-
-    .headerInfo {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        min-width: 20rem;
     }
 }
 
@@ -86,28 +61,32 @@
         margin-left: 2px !important;
     }
 
-    .headerImg img {
-        width: 20rem;
+    header {
+        padding: 3rem 1rem;
     }
-
     #p1 {
         font-size: 1.5rem;
     }
 
     #p2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    .headerTitle button {
+    .headerInfo button {
         font-size: 1rem;
-        padding: 0.2rem 0.5rem;
-
+        padding: 0.2rem 0.3rem;
     }
-
+    .slidingImages {
+        min-width: 15rem;
+    }
+    .slidingImages img {
+        height: 15rem;
+    }
     .headerInfo {
-        padding: 2rem 1rem;
-        gap: 2rem;
-        flex-wrap: wrap;
+        min-width: 15rem;
+    }
+    .slidingImages img {
+        border-radius: 2rem;
     }
 
     .footer1 {
