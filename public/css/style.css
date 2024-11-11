@@ -138,7 +138,7 @@ header {
 
 .footer {
     background-color: black;
-    margin-top: 30rem;
+    margin-top: 10rem;
 }
 
 .footer1 {
@@ -150,7 +150,7 @@ header {
     /* background-color: black; */
 }
 
-h4 {
+.footer h4 {
     color: whitesmoke;
 }
 

@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainHeading {
+    margin: 3rem;
+    background-color: burlywood;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.religion {
+    margin: 3rem 5rem 0 5rem;
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+}
+
+.religion h4 {
+    color: navy;
+    font-weight: bold;
+}
+
+.religionInfo {
+    display: flex;
+    gap: 5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.religionImg img {
+    border-radius: 1rem;
+    border: 2px solid black;
+    width: 20rem;
+}
+
+.religionInfo p {
+    text-align: justify;
+    color: black;
+    max-width: 100%;
+    min-width: 55%;
+    flex: 1;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+}
+
+/* Media Queries */
+
+@media (992px <=width < 1200px) {
+
+    .mainHeading {
+        margin: 3rem 2rem;
+    }
+
+    .religion {
+        margin: 2rem 2rem 0 2rem;
+        padding: 2rem 2rem;
+    }
+    
+    .religionInfo {
+        gap: 4rem;
+    }
+}
+
+@media (700px <=width < 992px) {
+    .mainHeading {
+        margin: 3rem 1rem;
+    }
+
+    .religion {
+        margin: 1rem;
+        padding: 2rem 2rem;
+    }
+    
+    .religionInfo {
+        gap: 3rem;
+    }
+}
+
+@media (500px <=width < 700px) {
+    .mainHeading {
+        margin: 3rem 1rem;
+    }
+    .religion {
+        margin: 1rem;
+        padding: 2rem 1rem;
+    }
+    
+    .religionInfo {
+        gap: 3rem;
+    }
+}
+
+@media (width < 500px) {
+    .mainHeading {
+        margin: 3rem 0.5rem;
+        padding: 0.5rem;
+    }
+    .religion {
+        margin: 1rem 0.5rem;
+        padding: 2rem 0.5rem;
+    }
+    .religionInfo {
+        gap: 3rem;
+    }
+    .religionImg img {
+        width: 20rem;
+    }
+    .religionImg {
+        margin: auto;
+    }
+}

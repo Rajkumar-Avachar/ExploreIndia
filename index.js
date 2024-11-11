@@ -13,19 +13,29 @@ app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use('*.css', (req, res, next) => {
-    res.set('Cache-Control', 'no-store');  // Prevent caching
-    next();
-});
-
-
+// app.use('*.css', (req, res, next) => {
+//     res.set('Cache-Control', 'no-store');  // Prevent caching
+//     next();
+// });
 
 app.get("/", (req, res) => {
     res.render("routes/index.ejs", { title: "Explore INDIA" });
 });
 
 app.get("/unesco", (req, res) => {
-    res.render("routes/unesco.ejs", { title: "UNESCO World Heritage Sites" });
+    res.render("routes/heritage/unesco.ejs", { title: "UNESCO World Heritage Sites" });
+});
+
+app.get("/religions", (req, res) => {
+    res.render("routes/culture/religions.ejs", { title: "Explore INDIA | Religions" });
+});
+
+app.get("/festivals", (req, res) => {
+    res.render("routes/culture/festivals.ejs", { title: "Explore INDIA | Festivals" });
+});
+
+app.get("/languages", (req, res) => {
+    res.render("routes/culture/languages.ejs", { title: "Explore INDIA | Languages" });
 });
 
 
