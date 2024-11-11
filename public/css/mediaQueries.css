@@ -109,4 +109,8 @@
         gap: 2rem;
         flex-wrap: wrap;
     }
+    .footer1 {
+        padding: 2rem;
+        gap: 1rem;
+    }
 }
