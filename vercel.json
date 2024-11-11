@@ -14,7 +14,7 @@
     ],
     "headers": [
         {
-            "source": "/(.*)\\.css",
+            "source": "/style.css",
             "headers": [
                 {
                     "key": "Cache-Control",
