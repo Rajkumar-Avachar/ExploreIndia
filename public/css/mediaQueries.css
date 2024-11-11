@@ -1,0 +1,112 @@
+@media (992px <=width < 1200px) {
+    .searchForm {
+        display: none !important;
+    }
+
+    .navbar {
+        padding: 0 30px 0 30px !important;
+    }
+
+    .headerImg img {
+        width: 25rem;
+    }
+
+    #p1 {
+        font-size: 2rem;
+    }
+
+    #p2 {
+        font-size: 3rem;
+    }
+
+    .headerTitle button {
+        font-size: 1rem;
+        padding: 0.2rem 1rem;
+    }
+}
+
+@media (700px <=width < 992px) {
+    .navbar {
+        padding: 0 20px 0 20px !important;
+    }
+
+    .headerImg img {
+        width: 20rem;
+    }
+
+    #p1 {
+        font-size: 1.5rem;
+    }
+
+    #p2 {
+        font-size: 2.5rem;
+    }
+
+    .headerTitle button {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .headerInfo {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (500px <=width < 700px) {
+    .headerImg img {
+        width: 15rem;
+    }
+
+    #p1 {
+        font-size: 1.2rem;
+    }
+
+    #p2 {
+        font-size: 2rem;
+    }
+
+    .headerTitle button {
+        font-size: 1rem;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .headerInfo {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (width < 500px) {
+    .navbar {
+        padding: 0 0 0 3px !important;
+    }
+
+    .navLogo {
+        margin-left: 2px !important;
+    }
+
+    .headerImg img {
+        width: 20rem;
+    }
+
+    #p1 {
+        font-size: 1.5rem;
+    }
+
+    #p2 {
+        font-size: 2rem;
+    }
+
+    .headerTitle button {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+
+    }
+
+    .headerInfo {
+        padding: 2rem 1rem;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+}
