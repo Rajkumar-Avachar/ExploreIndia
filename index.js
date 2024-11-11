@@ -5,10 +5,6 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const { title } = require("process");
 
-res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-res.setHeader('Pragma', 'no-cache');
-res.setHeader('Expires', '0');
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
