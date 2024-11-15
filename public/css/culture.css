@@ -3,9 +3,9 @@ body {
     padding: 0;
 }
 
-a {
+/* a {
     text-decoration: none;
-}
+} */
 
 /* Religions */
 
@@ -56,7 +56,54 @@ hr {
 
 /* Festivals */
 
+.festivals {
+    display: flex;
+    border: 2px solid black;
+    margin: 3rem;
+    /* gap: 3rem; */
+    border-radius: 1rem;
+}
 
+.religionOpt {
+    border-right: 1px solid black;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: black;
+    padding: 2rem;
+}
+
+.religionOpt h5 {
+    margin-bottom: 2rem;
+}
+
+.content {
+    flex: 1;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    /* padding-bottom: 2rem;
+    padding-right: 2rem; */
+}
+
+.content h4 {
+    width: 100%;
+}
+
+.card {
+    width: 15rem;
+    flex-grow: 1;
+    max-width: 17rem;
+}
+
+.card img {
+    height: 80%;
+}
+
+.card-body {
+    align-content: center;
+}
 
 /* Media Queries */
 
@@ -70,7 +117,7 @@ hr {
         margin: 2rem 2rem 0 2rem;
         padding: 2rem 2rem;
     }
-    
+
     .religionInfo {
         gap: 4rem;
     }
@@ -85,7 +132,7 @@ hr {
         margin: 1rem;
         padding: 2rem 2rem;
     }
-    
+
     .religionInfo {
         gap: 3rem;
     }
@@ -95,11 +142,12 @@ hr {
     .mainHeading {
         margin: 3rem 1rem;
     }
+
     .religion {
         margin: 1rem;
         padding: 2rem 1rem;
     }
-    
+
     .religionInfo {
         gap: 3rem;
     }
@@ -110,16 +158,20 @@ hr {
         margin: 3rem 0.5rem;
         padding: 0.5rem;
     }
+
     .religion {
         margin: 1rem 0.5rem;
         padding: 2rem 0.5rem;
     }
+
     .religionInfo {
         gap: 3rem;
     }
+
     .religionImg img {
         width: 20rem;
     }
+
     .religionImg {
         margin: auto;
     }

@@ -13,11 +13,6 @@ app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
-// app.use('*.css', (req, res, next) => {
-//     res.set('Cache-Control', 'no-store');  // Prevent caching
-//     next();
-// });
-
 app.get("/", (req, res) => {
     res.render("routes/index.ejs", { title: "Explore INDIA" });
 });
