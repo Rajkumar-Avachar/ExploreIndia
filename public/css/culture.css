@@ -3,9 +3,9 @@ body {
     padding: 0;
 }
 
-/* a {
+a {
     text-decoration: none;
-} */
+}
 
 /* Religions */
 
@@ -60,19 +60,15 @@ hr {
     display: flex;
     border: 2px solid black;
     margin: 3rem;
-    /* gap: 3rem; */
     border-radius: 1rem;
 }
 
 .religionOpt {
     border-right: 1px solid black;
-    font-size: 1.1rem;
-    cursor: pointer;
-    color: black;
     padding: 2rem;
 }
 
-.religionOpt h5 {
+.religionOpt h4 {
     margin-bottom: 2rem;
 }
 
@@ -83,18 +79,42 @@ hr {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
-    /* padding-bottom: 2rem;
-    padding-right: 2rem; */
+}
+
+.festivals button {
+    text-decoration: none;
+}
+.festivals button:focus {
+    background-color: black;
+    color: white;
 }
 
 .content h4 {
     width: 100%;
 }
 
+@keyframes cardAnimation {
+    from {
+        margin-top: 100rem;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .card {
     width: 15rem;
     flex-grow: 1;
+    transition: 0.5s;
     max-width: 17rem;
+    animation: cardAnimation 1s ease 0s 1 normal;
+}
+
+.card:hover {
+    box-shadow: 0.5rem 0.5rem 1.5rem black;
+    transform: scale(1.1);
 }
 
 .card img {
@@ -104,6 +124,8 @@ hr {
 .card-body {
     align-content: center;
 }
+
+
 
 /* Media Queries */
 
