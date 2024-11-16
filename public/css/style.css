@@ -50,7 +50,6 @@ a {
 .nav-item a:hover,
 :focus {
     color: red;
-    text-decoration: underline;
 }
 
 .dropdown-menu {

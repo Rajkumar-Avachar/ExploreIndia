@@ -1,4 +1,4 @@
-@media (992px <= width < 1200px) {
+@media (992px <=width < 1200px) {
     .searchForm {
         display: none !important;
     }
@@ -41,12 +41,15 @@
         font-size: 1rem;
         padding: 0.2rem 0.5rem;
     }
+
     .slidingImages {
         min-width: 20rem;
     }
+
     .slidingImages img {
         height: 20rem;
     }
+
     .headerInfo {
         min-width: 20rem;
     }
@@ -64,6 +67,7 @@
     header {
         padding: 3rem 1rem;
     }
+
     #p1 {
         font-size: 1.5rem;
     }
@@ -76,15 +80,19 @@
         font-size: 1rem;
         padding: 0.2rem 0.3rem;
     }
+
     .slidingImages {
         min-width: 15rem;
     }
+
     .slidingImages img {
         height: 15rem;
     }
+
     .headerInfo {
         min-width: 15rem;
     }
+
     .slidingImages img {
         border-radius: 2rem;
     }

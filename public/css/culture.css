@@ -61,11 +61,13 @@ hr {
     border: 2px solid black;
     margin: 3rem;
     border-radius: 1rem;
+    flex-wrap: wrap;
 }
 
 .religionOpt {
     border-right: 1px solid black;
     padding: 2rem;
+    justify-items: center;
 }
 
 .religionOpt h4 {
@@ -79,11 +81,14 @@ hr {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
+    justify-content: center;
 }
 
 .festivals button {
     text-decoration: none;
+    width: 10rem;
 }
+
 .festivals button:focus {
     background-color: black;
     color: white;
@@ -158,6 +163,22 @@ hr {
     .religionInfo {
         gap: 3rem;
     }
+
+    /* Festivals */
+
+    .festivals {
+        margin: 2rem;
+    }
+
+    .content {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        width: 10rem;
+        max-width: 13rem;
+    }
 }
 
 @media (500px <=width < 700px) {
@@ -172,6 +193,29 @@ hr {
 
     .religionInfo {
         gap: 3rem;
+    }
+
+    /* Festivals */
+
+    .festivals {
+        margin: 2rem;
+    }
+
+    .content {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        width: 10rem;
+        max-width: 13rem;
+    }
+    .religionOpt {
+        border-right: 1px solid black;
+        padding: 1rem 0.5rem;
+    }
+    .religionOpt button {
+        width: 7rem;
     }
 }
 
@@ -197,4 +241,34 @@ hr {
     .religionImg {
         margin: auto;
     }
+
+        /* Festivals */
+
+        .festivals {
+            margin: 1rem;
+            border: none;
+        }
+    
+        .content {
+            gap: 1rem;
+            padding: 1rem 0.5rem;
+        }
+    
+        .card {
+            width: 8rem;
+            max-width: 10rem;
+        }
+        .religionOpt {
+            border-right: 1px solid black;
+            width: 35%;
+            padding: 1rem 1rem 1rem 0;
+        }
+        .religionOpt button {
+            width: 6rem;
+            max-width: 7rem;
+            padding: 0 0.8rem;
+        }
+        .religionOpt h4 {
+            text-align: center;
+        }
 }

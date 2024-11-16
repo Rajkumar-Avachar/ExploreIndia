@@ -12,6 +12,7 @@
                 <a id="christianOption"><button class="btn btn-outline-dark">Christian Festivals</button></a><br><br>
                 <a id="sikhOption"><button class="btn btn-outline-dark">Sikh Festivals</button></a><br><br>
                 <a id="jainOption"><button class="btn btn-outline-dark">Jain Festivals</button></a><br><br>
+                <a id="buddhistOption"><button class="btn btn-outline-dark">Buddhist Festivals</button></a><br><br>
             </div>
 
             <div class="content" id="hinduContent">
@@ -351,6 +352,66 @@
                     </div>
                 </div>
             </div>
+
+            <div class="content" id="buddhistContent" style="display: none;">
+                <h4>Popular Buddhist Festivals</h4>
+                <div class="card border-2 border-dark rounded-4">
+                    <img src="https://media.assettype.com/freepressjournal/2023-01/4aa23ad3-b8e2-453d-9dd1-bb5bc65651fd/buddha_4264589__340.webp?width=1200"
+                        class="card-img-top rounded-top-4" alt="Vesak (Buddha Purnima)">
+                    <div class="card-body p-0 text-center">
+                        <p class="card-text"><b>Vesak (Buddha Purnima)</b></p>
+                    </div>
+                </div>
+                <div class="card border-2 border-dark rounded-4">
+                    <img src="https://www.journee-mondiale.com/en/wp-content/uploads/2024/07/journee-mondiale.com-96.jpg"
+                        class="card-img-top rounded-top-4" alt="Asalha Puja (Dharma Day)">
+                    <div class="card-body p-0 text-center">
+                        <p class="card-text"><b>Asalha Puja (Dharma Day)</b></p>
+                    </div>
+                </div>
+                <div class="card border-2 border-dark rounded-4">
+                    <img src="https://www.thailandfoundation.or.th/wp-content/uploads/2022/02/Picture4.png"
+                        class="card-img-top rounded-top-4" alt="Magha Puja">
+                    <div class="card-body p-0 text-center">
+                        <p class="card-text"><b>Magha Puja</b></p>
+                    </div>
+                </div>
+                <div class="card border-2 border-dark rounded-4">
+                    <img src="https://www.nriol.com/images/upo3.jpg"
+                        class="card-img-top rounded-top-4" alt="Uposatha">
+                    <div class="card-body p-0 text-center">
+                        <p class="card-text"><b>Uposatha</b></p>
+                    </div>
+                </div>
+                <div class="card border-2 border-dark rounded-4">
+                    <img src="https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2021/02/Losar-Festival-Ladakh.jpg?fit=1024%2C683&ssl=1"
+                        class="card-img-top rounded-top-4" alt="Losar">
+                    <div class="card-body p-0 text-center">
+                        <p class="card-text"><b>Losar</b></p>
+                    </div>
+                </div>
+                <div class="card border-2 border-dark rounded-4">
+                    <img src="https://buddhaweekly.com/wp-content/uploads/Buddha-Weekly-Paranirvana-Day-Buddhism.jpg"
+                        class="card-img-top rounded-top-4" alt="Parinirvana Day">
+                    <div class="card-body p-0 text-center">
+                        <p class="card-text"><b>Parinirvana Day</b></p>
+                    </div>
+                </div>
+                <div class="card border-2 border-dark rounded-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Abhisit_offer_Kathina_robes.jpg/1200px-Abhisit_offer_Kathina_robes.jpg"
+                        class="card-img-top rounded-top-4" alt="Kathina">
+                    <div class="card-body p-0 text-center">
+                        <p class="card-text"><b>Kathina</b></p>
+                    </div>
+                </div>
+                <div class="card border-2 border-dark rounded-4">
+                    <img src="https://www.holidaysmart.com/sites/default/files/holidays/images/Buddhism-Abhidhamma-cv.jpg"
+                        class="card-img-top rounded-top-4" alt="Abhidhamma Day">
+                    <div class="card-body p-0 text-center">
+                        <p class="card-text"><b>Abhidhamma Day</b></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -374,6 +435,10 @@
             $("#jainOption").click(function () {
                 $(".content").hide();
                 $("#jainContent").show();
+            });
+            $("#buddhistOption").click(function () {
+                $(".content").hide();
+                $("#buddhistContent").show();
             });
         </script>
 
