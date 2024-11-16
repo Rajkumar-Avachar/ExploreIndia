@@ -113,7 +113,7 @@ hr {
     width: 15rem;
     flex-grow: 1;
     transition: 0.5s;
-    max-width: 17rem;
+    max-width: 15rem;
     animation: cardAnimation 1s ease 0s 1 normal;
 }
 
@@ -177,7 +177,7 @@ hr {
 
     .card {
         width: 10rem;
-        max-width: 13rem;
+        max-width: 10rem;
     }
 }
 
@@ -208,12 +208,14 @@ hr {
 
     .card {
         width: 10rem;
-        max-width: 13rem;
+        max-width: 10rem;
     }
+
     .religionOpt {
         border-right: 1px solid black;
         padding: 1rem 0.5rem;
     }
+
     .religionOpt button {
         width: 7rem;
     }
@@ -242,33 +244,36 @@ hr {
         margin: auto;
     }
 
-        /* Festivals */
+    /* Festivals */
 
-        .festivals {
-            margin: 1rem;
-            border: none;
-        }
-    
-        .content {
-            gap: 1rem;
-            padding: 1rem 0.5rem;
-        }
-    
-        .card {
-            width: 8rem;
-            max-width: 12rem;
-        }
-        .religionOpt {
-            border-right: 1px solid black;
-            width: 35%;
-            padding: 1rem 1rem 1rem 0;
-        }
-        .religionOpt button {
-            width: 6rem;
-            max-width: 7rem;
-            padding: 0 0.8rem;
-        }
-        .religionOpt h4 {
-            text-align: center;
-        }
+    .festivals {
+        margin: 1rem;
+        border: none;
+    }
+
+    .content {
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .card {
+        width: 10rem;
+        max-width: 12rem;
+    }
+
+    .religionOpt {
+        border-right: 1px solid black;
+        width: 35%;
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    .religionOpt button {
+        width: 6rem;
+        max-width: 7rem;
+        padding: 0 0.8rem;
+    }
+
+    .religionOpt h4 {
+        text-align: center;
+    }
 }
