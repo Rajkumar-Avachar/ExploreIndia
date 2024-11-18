@@ -10,8 +10,13 @@ router.get("/", (req, res) => {
 
 router.get("/unescoSites", async (req, res) => {
     let unescosites = await UnescoSite.find();
-    res.render("routes/heritage/unescoSites.ejs", { title: "UNESCO World Heritage Sites", unescosites },);
+    res.render("routes/heritage/unescoSites.ejs", { title: "UNESCO World Heritage Sites", unescosites });
 });
 
+router.get("/unescoSites/:id", async (req, res) => {
+    let {id} = req.params;
+    let unescosite = await UnescoSite.findById(id);
+    res.render("routes/heritage/showUnescoSite.ejs", { title: "Site" , unescosite});
+});
 
 module.exports = router;

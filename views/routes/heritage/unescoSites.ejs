@@ -13,8 +13,8 @@
             <div>
                 <h4>Culture</h4>
                 <% for(unescosite of unescosites) { %>
-                    <li><a href="">
-                            <%=unescosite.title%>
+                    <li><a href="/unescoSites/<%=unescosite._id%>">
+                            <%=unescosite.title%>,<%=unescosite._id%>
                         </a></li>
                     <% } %>
             </div>
