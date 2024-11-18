@@ -5,8 +5,6 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const heritage = require("./routes/heritage.js");
 const culture = require("./routes/culture.js");
-const dotenv = require('dotenv');
-
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -16,7 +14,7 @@ app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 const UnescoSite = require("./models/schema.js");
-require('dotenv').config();
+// require('dotenv').config();
 
 async function main() {
     const mongoURI = process.env.MONGO_URI;
