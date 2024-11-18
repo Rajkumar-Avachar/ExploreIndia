@@ -3,7 +3,9 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
-const { title } = require("process");
+const heritage = require("./routes/heritage.js");
+const culture = require("./routes/culture.js");
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -12,26 +14,22 @@ app.use(express.json());
 app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
+const UnescoSite = require("./models/schema.js");
 
-app.get("/", (req, res) => {
-    res.render("routes/index.ejs", { title: "Explore INDIA" });
-});
+async function main() {
+    const mongoURI = "mongodb+srv://rajavachar59:exploreindia@explore-india-db.57jx4.mongodb.net/exloreindiadb";
 
-app.get("/unesco", (req, res) => {
-    res.render("routes/heritage/unesco.ejs", { title: "UNESCO World Heritage Sites" });
-});
+    try {
+        await mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+        console.log("Connected to MongoDB Atlas successfully!");
+    } catch (err) {
+        console.error("Error connecting to MongoDB:", err);
+    }
+}
+main();
 
-app.get("/religions", (req, res) => {
-    res.render("routes/culture/religions.ejs", { title: "Explore INDIA | Religions" });
-});
+app.use("/", heritage, culture);
 
-app.get("/festivals", (req, res) => {
-    res.render("routes/culture/festivals.ejs", { title: "Explore INDIA | Festivals" });
-});
-
-app.get("/languages", (req, res) => {
-    res.render("routes/culture/languages.ejs", { title: "Explore INDIA | Languages" });
-});
 
 
 const port = process.env.PORT || 8000;
