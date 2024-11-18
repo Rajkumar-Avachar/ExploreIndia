@@ -30,6 +30,8 @@ main();
 
 app.use("/", heritage, culture);
 
+// UnescoSite.insertMany([{ title: "Taj Mahal", image: "hdtbjb", description: "Taj Mahal is beautiful" }, { title: "Ajantha Caves", image: "rtgyh", description: "Ajantha Caves are amazing" }]);
+
 
 
 const port = process.env.PORT || 8000;
