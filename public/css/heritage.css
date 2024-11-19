@@ -1,3 +1,5 @@
+/* Unesco World Heritage Sites */
+
 .map iframe {
     height: 70vh;
     width: 60%;
@@ -17,18 +19,30 @@
 }
 
 .siteNames {
-    margin: 5rem 3rem;
-    border: 2px solid black;
+    margin: 3rem 10rem;
+    /* border: 2px solid black; */
     border-radius: 2rem;
-    height: 50rem;
     display: flex;
     padding: 1rem;
-    gap: 2rem;
+    background-color: whitesmoke;
 }
 
 .siteNames div {
-    border: 1px solid navy;
+    /* border: 1px solid navy; */
     flex-grow: 1;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 0 2rem;
+
+
+}
+.siteNames h4 {
+    text-align: center;
+}
+.siteNames a:hover {
+    color: navy;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
 /* Show Unesco Site */
@@ -98,7 +112,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* flex: 1; */
 }
 
 #gallery img {

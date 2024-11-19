@@ -31,12 +31,12 @@
 
                 <div class="description">
                     <p class="info">
-                        <%=unescosite.description[0]%>
-                            <br><br>
-                            <%=unescosite.description[1]%>
+                        <% for(description of unescosite.description) { %>
+                            <%=description%>
                                 <br><br>
-                                <%=unescosite.description[2]%>
+                                <% } %>
                     </p>
+
                     <aside class=".aside">
                         <div class="image">
                             <img src="<%=unescosite.image[0]%>" width="500" alt="AjanthaCaves">
@@ -96,26 +96,6 @@
                 $("#video").show();
             });
         </script>
-
-
-
-
-        <!-- <section id="siteInfo">
-
-            <div class="image">
-                <img src="<%=unescosite.image[0]%>" width="500" alt="Image Error">
-            </div>
-
-            <div class="video">
-                <iframe width="600" height="355" src="<%=unescosite.video%>?autoplay=1&mute=1"
-                    allow="autoplay"></iframe>
-            </div>
-
-            <p class="description">
-                <%=unescosite.description%>
-            </p>
-        </section> -->
-
 
 
     </body>

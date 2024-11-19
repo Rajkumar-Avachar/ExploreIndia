@@ -8,6 +8,7 @@ const unescoSchema = new mongoose.Schema({
     siteId: Number,
     video: String,
     description: [String],
+    category: String,
 });
 
 const UnescoSite = mongoose.model("UnescoSite", unescoSchema);

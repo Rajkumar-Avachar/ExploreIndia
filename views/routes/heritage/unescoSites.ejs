@@ -9,16 +9,48 @@
             </iframe>
         </div>
 
-        <section id="siteNames">
+        <br><br>
+
+        <hr>
+
+        <section class="siteNames">
             <div>
-                <h4>Culture</h4>
+                <h4>Culture (35)</h4><br>
                 <% for(unescosite of unescosites) { %>
-                    <li><a href="/unescoSites/<%=unescosite.siteId%>"> <%=unescosite.title%>
-                        </a></li>
-                    <% } %>
+                    <% if(unescosite.category=="Cultural" ) { %>
+                        <li><a href="/unescoSites/<%=unescosite.siteId%>">
+                                <%=unescosite.title%>
+                            </a></li>
+                        <% } %>
+
+                            <% } %>
             </div>
-            <div></div>
-            <div></div>
+
+            <div>
+                <h4>Natural (7)</h4><br>
+                <% for(unescosite of unescosites) { %>
+                    <% if(unescosite.category=="Natural" ) { %>
+                        <li><a href="/unescoSites/<%=unescosite.siteId%>">
+                                <%=unescosite.title%>
+                            </a></li>
+                        <% } %>
+
+                            <% } %>
+            </div>
+
+
+            <div>
+                <h4>Mixed (1)</h4><br>
+                <% for(unescosite of unescosites) { %>
+                    <% if(unescosite.category=="Mixed" ) { %>
+                        <li><a href="/unescoSites/<%=unescosite.siteId%>">
+                                <%=unescosite.title%>
+                            </a></li>
+                        <% } %>
+
+                            <% } %>
+            </div>
+
         </section>
 
     </body>
