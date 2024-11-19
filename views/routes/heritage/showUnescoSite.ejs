@@ -2,17 +2,109 @@
 
     <body>
 
-        <div>
-            <h2>
-                <%= unescosite.title %>
-            </h2>
+        <h2 class="mainTitle">
+            <%= unescosite.title %>
+        </h2>
 
-            <img src="<%=unescosite.image%>" alt="Image Error">
+        <div class="maindiv">
+            <div id="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item" id="desc">
+                        <a class="nav-link active" aria-current="page" href="#">Description</a>
+                    </li>
+                    <li class="nav-item" id="gall">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item" id="vid">
+                        <a class="nav-link" href="#">Video</a>
+                    </li>
+                </ul>
+            </div>
 
-            <p>
+            <section class="Content" id="description">
+
+                <h5>
+                    <b>
+                        <%= unescosite.title %>
+                    </b>
+                </h5>
+
+                <div class="siteInfo">
+                    <p class="description">
+                        <%=unescosite.description[0]%>
+                            <br><br>
+                            <%=unescosite.description[1]%>
+                                <br><br>
+                                <%=unescosite.description[2]%>
+                    </p>
+                    <aside class=".aside">
+                        <div class="image">
+                            <img src="<%=unescosite.image[0]%>" width="500" alt="Image Error">
+                        </div>
+                        <div class="generalInfo">
+                            <div class="country">
+                                <img src="https://image.similarpng.com/very-thumbnail/2020/06/India-flag-icon-on-transparent-background-PNG.png"
+                                    width="50" alt="">
+                                <h5><b>INDIA</b></h5>
+                            </div>
+
+                            <br>
+
+                            <p><b>Year of Inscription:</b>&nbsp;<%=unescosite.yearOfInscription%>
+                            </p>
+                            <p><b>UNESCO Site id:</b>&nbsp;<%=unescosite.siteId%>
+                            </p>
+                            <p><b>Location:</b>&nbsp;<%=unescosite.location%>.</p>
+                        </div>
+                    </aside>
+                </div>
+
+            </section>
+
+            <section class="Content" id="gallery">
+                <p>This is gallery</p>
+            </section>
+
+            <section class="Content" id="video">
+                <p>This is video</p>
+            </section>
+        </div>
+
+        < <script>
+            $(".Content").hide();
+            $("#description").show();
+            $("#desc").click(function () {
+            $(".Content").hide();
+            $("#description").show();
+            });
+            $("#gall").click(function () {
+            $(".Content").hide();
+            $("#gallery").show();
+            });
+            $("#vid").click(function () {
+            $(".Content").hide();
+            $("#video").show();
+            });
+            </script>
+
+
+
+
+            <!-- <section id="siteInfo">
+
+            <div class="image">
+                <img src="<%=unescosite.image[0]%>" width="500" alt="Image Error">
+            </div>
+
+            <div class="video">
+                <iframe width="600" height="355" src="<%=unescosite.video%>?autoplay=1&mute=1"
+                    allow="autoplay"></iframe>
+            </div>
+
+            <p class="description">
                 <%=unescosite.description%>
             </p>
-        </div>
+        </section> -->
 
 
 

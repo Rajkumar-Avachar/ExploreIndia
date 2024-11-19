@@ -4,6 +4,7 @@
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem #000000;
 }
+
 .map {
     text-align: center;
 }
@@ -15,7 +16,7 @@
     border-radius: 1rem;
 }
 
-section {
+.siteNames {
     margin: 5rem 3rem;
     border: 2px solid black;
     border-radius: 2rem;
@@ -25,7 +26,46 @@ section {
     gap: 2rem;
 }
 
-section div {
+.siteNames div {
     border: 1px solid navy;
     flex-grow: 1;
+}
+
+/* Show Unesco Site */
+
+.mainTitle {
+    color: navy;
+    margin: 2rem 3rem;
+}
+
+.maindiv {
+    margin: 2rem 3rem;
+}
+
+.Content {
+    margin: 2rem 1rem;
+}
+
+.siteInfo {
+    display: flex;
+    gap: 5rem;
+    margin-top: 1rem;
+}
+.image img {
+    border-radius: 1rem;
+}
+.description {
+    text-align: justify;
+}
+.generalInfo {
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+.country {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.country h5 {
+    margin: 0;
 }

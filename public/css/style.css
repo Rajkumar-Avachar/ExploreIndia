@@ -157,7 +157,7 @@ header {
     color: whitesmoke;
 }
 
-h4+p {
+#footerQuote {
     max-width: 25rem;
     margin-top: 1rem;
     text-align: justify;
