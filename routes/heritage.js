@@ -15,8 +15,8 @@ router.get("/unescoSites", async (req, res) => {
 
 router.get("/unescoSites/:id", async (req, res) => {
     let {id} = req.params;
-    let unescosite = await UnescoSite.findById(id);
-    res.render("routes/heritage/showUnescoSite.ejs", { title: "Site" , unescosite});
+    let unescosite = await UnescoSite.findOne({siteId: id})
+    res.render("routes/heritage/showUnescoSite.ejs", { title: `${unescosite.title} - UNESCO World Heritage Sites` , unescosite});
 });
 
 module.exports = router;

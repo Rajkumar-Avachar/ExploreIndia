@@ -39,33 +39,90 @@
 }
 
 .maindiv {
-    margin: 2rem 3rem;
+    margin: 2rem 4rem;
 }
 
 .Content {
     margin: 2rem 1rem;
 }
 
-.siteInfo {
+.description {
     display: flex;
-    gap: 5rem;
+    gap: 3rem;
     margin-top: 1rem;
+    text-align: justify;
 }
+
 .image img {
     border-radius: 1rem;
 }
-.description {
-    text-align: justify;
-}
+
 .generalInfo {
     margin-top: 3rem;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid gainsboro;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+
 }
+
 .country {
     display: flex;
     gap: 0.5rem;
     align-items: center;
 }
+
 .country h5 {
     margin: 0;
+}
+
+.maindiv hr {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#tabs .nav-link {
+    color: gray !important;
+}
+
+#tabs .nav-link:hover {
+    color: black !important;
+}
+
+#tabs .nav-link:focus {
+    color: black !important;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+#gallery img {
+    border-radius: 1rem;
+    animation: galleryAnimation 1s ease 0s 1 normal;
+    transition: 0.5s;
+}
+
+@keyframes galleryAnimation {
+    from {
+        margin-top: 100rem;
+        opacity: 0.5;
+    }
+
+    top {
+        opacity: 1;
+    }
+}
+
+#gallery img:hover {
+    box-shadow: 1rem 1rem 2rem black;
+    transform: scale(1.1);
+}
+
+#video iframe {
+    border-radius: 1rem;
 }
