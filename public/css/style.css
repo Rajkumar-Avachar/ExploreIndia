@@ -71,27 +71,17 @@ a {
 
 /* Header */
 
-/* HTML: <div class="rounded-edge"></div> */
-
-.roundedEdge {
-    width: 100%;
-    height: 85vh;
-    aspect-ratio: 3/2;
-    clip-path: ellipse(100% 100% at 50% 0);
-    background: burlywood;
+header {
+    margin: 0;
     padding: 5rem 3rem;
     display: flex;
     gap: 2rem;
-    margin: 0;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background-color: wheat;
+    clip-path: ellipse(100% 100% at 50% 0);
 }
-
-/* header {
-    
-    background-color: whitesmoke;
-} */
 
 .slidingImages {
     width: 45rem;
