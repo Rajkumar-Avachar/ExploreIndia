@@ -21,10 +21,12 @@
 .siteNames {
     margin: 3rem 10rem;
     /* border: 2px solid black; */
-    border-radius: 2rem;
+    border-radius: 1rem;
     display: flex;
-    padding: 1rem;
+    padding: 3rem 1rem;
     background-color: whitesmoke;
+    box-shadow: 0.5rem 0.5rem 2rem black;
+
 }
 
 .siteNames div {
@@ -38,11 +40,21 @@
 }
 .siteNames h4 {
     text-align: center;
+    color: navy;
+    font-weight: bold;
 }
 .siteNames a:hover {
     color: navy;
-    transition: 0.3s;
-    font-weight: bold;
+}
+.siteNames li {
+    transition: 0.5s;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.siteNames li:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
 }
 
 /* Show Unesco Site */
