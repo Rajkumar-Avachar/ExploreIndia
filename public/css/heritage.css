@@ -81,12 +81,14 @@
 
 .image img {
     border-radius: 1rem;
+    border: 2px solid black;
+    box-shadow: 0.3rem 0.3rem 1rem black;
 }
 
 .generalInfo {
     margin-top: 3rem;
     padding: 1rem 2rem;
-    border: 1px solid gainsboro;
+    border: 1px solid gray;
     border-radius: 1rem;
     background-color: whitesmoke;
 
@@ -152,4 +154,5 @@
 
 #video iframe {
     border-radius: 1rem;
+    border: 2px solid black;
 }
