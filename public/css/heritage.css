@@ -25,27 +25,27 @@
     display: flex;
     padding: 3rem 1rem;
     background-color: whitesmoke;
-    box-shadow: 0.5rem 0.5rem 2rem black;
+    box-shadow: 0.5rem 0.5rem 1rem black;
 
 }
 
 .siteNames div {
-    /* border: 1px solid navy; */
     flex-grow: 1;
     border-right: 1px solid gray;
     border-left: 1px solid gray;
     padding: 0 2rem;
-
-
 }
+
 .siteNames h4 {
     text-align: center;
     color: navy;
     font-weight: bold;
 }
+
 .siteNames a:hover {
     color: navy;
 }
+
 .siteNames li {
     transition: 0.5s;
     font-weight: 500;
@@ -55,6 +55,10 @@
 .siteNames li:hover {
     transform: scale(1.1);
     text-decoration: underline;
+}
+
+#mixed {
+    margin-top: 3rem;
 }
 
 /* Show Unesco Site */
@@ -157,4 +161,43 @@
 #video iframe {
     border-radius: 1rem;
     border: 2px solid black;
+}
+
+
+
+
+/* Media Queries */
+
+@media (width < 992px) {
+    .siteNames {
+        margin: 3rem 2rem;
+    }
+}
+
+@media (width <=500px) {
+
+    #mainHeading {
+        margin: 1rem 1rem 2rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .map iframe {
+        height: 70vh;
+        width: 90%;
+        border-radius: 0.5rem;
+        box-shadow: 0.5rem 0.5rem 1rem #000000;
+    }
+
+    .siteNames {
+        margin: 1rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+        box-shadow: none;
+    }
+
+    .siteNames div {
+        border: none;
+        padding: 0;
+    }
+
 }

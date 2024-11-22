@@ -36,19 +36,18 @@
                         <% } %>
 
                             <% } %>
-            </div>
+
+                                <h4 id="mixed">Mixed (1)</h4><br>
+                                <% for(unescosite of unescosites) { %>
+                                    <% if(unescosite.category=="Mixed" ) { %>
+                                        <li><a href="/unescoSites/<%=unescosite.siteId%>">
+                                                <%=unescosite.title%>
+                                            </a></li>
+                                        <% } %>
+
+                                            <% } %>
 
 
-            <div>
-                <h4>Mixed (1)</h4><br>
-                <% for(unescosite of unescosites) { %>
-                    <% if(unescosite.category=="Mixed" ) { %>
-                        <li><a href="/unescoSites/<%=unescosite.siteId%>">
-                                <%=unescosite.title%>
-                            </a></li>
-                        <% } %>
-
-                            <% } %>
             </div>
 
         </section>
