@@ -29,6 +29,7 @@ a {
     cursor: pointer;
     text-decoration: none;
 }
+
 .navLogo img {
     width: 80px;
 }
@@ -79,6 +80,7 @@ header {
     flex-wrap: wrap;
     background-color: wheat;
     clip-path: ellipse(100% 100% at 50% 0);
+    height: 85vh;
 }
 
 .slidingImages {
@@ -198,6 +200,71 @@ header {
     margin: 0;
     padding: 0;
     color: white;
+}
+
+/* Other */
+
+
+
+.nationalIdentityElements {
+    padding: 3rem 0 5rem;
+    margin: 3rem;
+    /* border: 1px solid black; */
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+}
+
+.nationalIdentityElements h2 {
+    color: navy;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+/* .elementCards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+} */
+.elementCards {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; 
+    margin-top: 3rem;
+    justify-items: center;
+    align-items: stretch;
+}
+
+@keyframes elementsAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.elementCards .card {
+    width: 15rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+    animation: elementsAnimation 2s ease 0s 1 normal;
+}
+
+.elementCards img {
+    height: 50%;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.elementCards .card:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 0.2rem 0.2rem 1rem black;
 }
 
 

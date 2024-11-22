@@ -109,7 +109,7 @@ hr {
     }
 }
 
-.card {
+.content .card {
     width: 15rem;
     flex-grow: 1;
     transition: 0.5s;
@@ -117,16 +117,16 @@ hr {
     animation: cardAnimation 1s ease 0s 1 normal;
 }
 
-.card:hover {
+.content .card:hover {
     box-shadow: 0.5rem 0.5rem 1.5rem black;
     transform: scale(1.1);
 }
 
-.card img {
+.content .card img {
     height: 80%;
 }
 
-.card-body {
+.content .card-body {
     align-content: center;
 }
 
@@ -175,7 +175,7 @@ hr {
         padding: 1rem;
     }
 
-    .card {
+    .content .card {
         width: 10rem;
         max-width: 10rem;
     }
@@ -206,7 +206,7 @@ hr {
         padding: 1rem;
     }
 
-    .card {
+    .content .card {
         width: 10rem;
         max-width: 10rem;
     }
@@ -256,7 +256,7 @@ hr {
         padding: 1rem 0.5rem;
     }
 
-    .card {
+    .content .card {
         width: 10rem;
         max-width: 12rem;
     }
