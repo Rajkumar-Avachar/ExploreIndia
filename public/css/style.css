@@ -326,6 +326,7 @@ header {
 
     header {
         padding: 3rem 1rem;
+        height: auto;
     }
 
     #p1 {
