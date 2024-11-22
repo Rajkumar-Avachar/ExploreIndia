@@ -29,7 +29,6 @@ a {
     cursor: pointer;
     text-decoration: none;
 }
-
 .navLogo img {
     width: 80px;
 }
@@ -44,7 +43,7 @@ a {
 
 .nav-item a {
     color: black;
-    font-size: 1rem;
+    font-size: 17px;
 }
 
 .nav-item a:hover,
@@ -60,13 +59,12 @@ a {
     background-color: rgb(236, 235, 235);
 }
 
-.searchForm button {
-    border: 3px solid green;
-    border-radius: 7px;
+.loginBtn {
+    max-width: 7rem;
 }
 
-.searchForm input {
-    border: 2px solid green;
+#navbarSupportedContent {
+    justify-content: flex-end !important;
 }
 
 /* Header */
@@ -200,4 +198,100 @@ header {
     margin: 0;
     padding: 0;
     color: white;
+}
+
+
+/* Media Queries */
+
+/* @media (992px <=width < 1200px) {
+  
+} */
+
+@media (700px <=width < 992px) {
+
+    #p1 {
+        font-size: 2.2rem;
+    }
+
+    #p2 {
+        font-size: 3.2rem;
+    }
+
+    .headerInfo button {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+@media (500px <=width < 700px) {
+
+    #p1 {
+        font-size: 2rem;
+    }
+
+    #p2 {
+        font-size: 3rem;
+    }
+
+    .headerInfo button {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .slidingImages {
+        min-width: 20rem;
+    }
+
+    .slidingImages img {
+        height: 20rem;
+    }
+
+    .headerInfo {
+        min-width: 20rem;
+    }
+}
+
+@media (width < 500px) {
+
+    .navLogo {
+        margin-left: 2px !important;
+    }
+
+    header {
+        padding: 3rem 1rem;
+    }
+
+    #p1 {
+        font-size: 1.5rem;
+    }
+
+    #p2 {
+        font-size: 2.5rem;
+    }
+
+    .headerInfo button {
+        font-size: 1rem;
+        padding: 0.2rem 0.3rem;
+    }
+
+    .slidingImages {
+        min-width: 15rem;
+    }
+
+    .slidingImages img {
+        height: 15rem;
+    }
+
+    .headerInfo {
+        min-width: 15rem;
+    }
+
+    .slidingImages img {
+        border-radius: 1rem;
+    }
+
+    .footer1 {
+        padding: 3rem 1rem;
+        gap: 1rem;
+    }
 }
