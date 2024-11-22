@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const heritage = require("./routes/heritage.js");
 const culture = require("./routes/culture.js");
+const loginSignup = require("./routes/loginSignup.js");
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -29,7 +31,7 @@ async function main() {
 }
 main();
 
-app.use("/", heritage, culture);
+app.use("/", heritage, culture, loginSignup);
 
 
 const port = process.env.PORT || 8000;

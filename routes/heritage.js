@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
-const { title } = require("process");
-const mongoose = require("mongoose");
 const UnescoSite = require("../models/schema.js");
 
 router.get("/", (req, res) => {

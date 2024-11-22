@@ -1,10 +1,5 @@
 const express = require("express");
-const app = express();
 const router = express.Router({mergeParams: true});
-// const path = require("path");
-// const mongoose = require("mongoose");
-// const ejsMate = require("ejs-mate");
-const { title } = require("process");
 
 
 router.get("/religions", (req, res) => {

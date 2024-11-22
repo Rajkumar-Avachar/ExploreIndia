@@ -87,6 +87,7 @@
     border-radius: 1rem;
     border: 2px solid black;
     box-shadow: 0.3rem 0.3rem 1rem black;
+    width: 30rem;
 }
 
 .generalInfo {
@@ -161,20 +162,57 @@
 #video iframe {
     border-radius: 1rem;
     border: 2px solid black;
+    width: 50rem;
+    height: 25rem;
 }
-
-
-
 
 /* Media Queries */
 
+
+@media (width < 1200px) {
+
+    /* Unesco */
+
+    .maindiv {
+        margin: 2rem;
+    }
+
+    .image img {
+        width: 25rem;
+    }
+
+    .description {
+        gap: 1rem;
+    }
+}
+
 @media (width < 992px) {
+
+    /* Unesco */
+
     .siteNames {
         margin: 3rem 2rem;
+    }
+
+    .maindiv {
+        margin: 2rem;
+    }
+
+    .description {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    #video iframe {
+        width: 100%;
+        max-height: 20rem;
+        border-radius: 0.5rem;
     }
 }
 
 @media (width <=500px) {
+
+    /* Unesco */
 
     #mainHeading {
         margin: 1rem 1rem 2rem 1rem;
@@ -200,4 +238,27 @@
         padding: 0;
     }
 
+    .maindiv {
+        margin: 0;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    .mainTitle {
+        margin: 2rem 1rem 1rem;
+    }
+
+    .info {
+        margin-top: 1rem;
+    }
+
+    .generalInfo {
+        padding: 1rem;
+    }
+
+    #video iframe {
+        max-height: 15rem;
+    }
 }
