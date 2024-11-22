@@ -87,7 +87,7 @@ header {
     min-width: 35rem;
     max-width: 100%;
     flex: 1;
-    box-shadow: 0.5rem 0.5rem 1rem black;
+    box-shadow: 0.2rem 0.2rem 0.5rem black;
     border-radius: 1rem;
 }
 
