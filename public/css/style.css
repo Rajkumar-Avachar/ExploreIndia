@@ -97,9 +97,6 @@ header {
     border: 2px solid black;
 }
 
-/* header {
-    background-color: whitesmoke;
-} */
 
 .headerInfo {
     text-align: center;
@@ -203,12 +200,9 @@ header {
 
 /* Other */
 
-
-
 .nationalIdentityElements {
     padding: 3rem 0 5rem;
     margin: 3rem;
-    /* border: 1px solid black; */
     text-align: center;
     background-color: whitesmoke;
     border-radius: 1rem;
@@ -227,6 +221,7 @@ header {
     margin-top: 3rem;
     flex-wrap: wrap;
 } */
+
 .elementCards {
     display: grid;
     align-items: center;
@@ -277,6 +272,12 @@ header {
     }
 }
 
+@media (width <=1200px) {
+    .elementCards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (700px <=width < 992px) {
 
     #p1 {
@@ -290,6 +291,18 @@ header {
     .headerInfo button {
         font-size: 1rem;
         padding: 0.2rem 0.5rem;
+    }
+
+    .nationalIdentityElements {
+        margin: 3rem 1rem;
+    }
+
+    .elementCards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .elementCards .card {
+        width: 12rem;
     }
 }
 
@@ -318,6 +331,18 @@ header {
 
     .headerInfo {
         min-width: 20rem;
+    }
+
+    .nationalIdentityElements {
+        margin: 3rem 1rem;
+    }
+
+    .elementCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .elementCards .card {
+        width: 12rem;
     }
 }
 
@@ -363,5 +388,27 @@ header {
     .footer1 {
         padding: 3rem 1rem;
         gap: 1rem;
+    }
+
+    .nationalIdentityElements {
+        margin: 3rem 1rem;
+    }
+
+    .elementCards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .elementCards .card {
+        width: 10rem;
+    }
+    .elementCards .card .card-body {
+        padding: 0.5rem;
+    }
+    .elementCards .card p {
+        font-size: 0.8rem;
+    }
+    .elementCards .card h5 {
+        font-size: 1rem;
     }
 }
