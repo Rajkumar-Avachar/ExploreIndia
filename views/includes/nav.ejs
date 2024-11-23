@@ -57,10 +57,14 @@
 
                 <div class="dropdown ms-lg-5 mt-3 mt-md-0 me-4 userOptions align-content-center">
                     <a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="d-flex">
-                        <i class="fa-solid fa-circle-user fs-2 ms-2"></i>
+                        <i class="fa-solid fa-circle-user fs-1 ms-2"></i>
                         <% if(user) { %>
-                        <p class="ms-2 mb-0 align-content-center"> <b>Hello, <%= user.username %></b> </p>
-                        <% } %>
+                            <p class="ms-2 mb-0 align-content-center"> <b>Hello, <%= user.username %></b> </p>
+                            <% } %>
+
+                                <% if(!user) { %>
+                                    <p class="ms-2 mb-0 align-content-center"> <b>Account</b> </p>
+                                    <% } %>
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-end pt-1 pb-1">
@@ -80,16 +84,6 @@
                 </div>
 
             </ul>
-
-
-
-            <!-- <% if(!user) { %>
-            <a href="/login"><button type="button" class="btn loginBtn ms-5 me-2">Log In</button></a>
-            <% } %>
-
-            <% if(user) { %>
-            <a href="/logout"><button type="button" class="btn loginBtn ms-5 me-2">Logout</button></a>
-            <% } %> -->
 
         </div>
 
