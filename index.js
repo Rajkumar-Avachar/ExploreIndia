@@ -5,7 +5,15 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const heritage = require("./routes/heritage.js");
 const culture = require("./routes/culture.js");
-const loginSignup = require("./routes/loginSignup.js");
+const user = require("./routes/user.js");
+const User = require("./models/userSchema.js");
+const session = require("express-session");
+const flash = require("connect-flash");
+const passport = require("passport");
+const passportLocal = require("passport-local");
+const ExpressError = require("./utils/ExpressError.js");
+const { title } = require("process");
+
 
 
 app.set("view engine", "ejs");
@@ -15,7 +23,6 @@ app.use(express.json());
 app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
-const UnescoSite = require("./models/schema.js");
 
 // require('dotenv').config();
 
@@ -31,7 +38,50 @@ async function main() {
 }
 main();
 
-app.use("/", heritage, culture, loginSignup);
+const sessionOptions = {
+    secret: "thedarkknight",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+        httpOnly: true,
+    },
+};
+
+app.use(session(sessionOptions));
+app.use(flash());
+
+app.use((req, res, next) => {
+    res.locals.error = req.flash("error");
+    next();
+});
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new passportLocal(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use((req, res, next) => {
+    res.locals.success = req.flash.success;
+    next();
+});
+
+app.use("/", heritage, culture, user);
+
+
+
+
+
+app.all("*", (req, res, next) => {
+    next(new ExpressError(404, "Page Not Found"));
+});
+
+app.use((err, req, res, next) => {
+    let { statusCode = 500, message = "Something went wrong!" } = err;
+    res.status(statusCode).render("routes/error/error.ejs", { message, title: "Error" });
+});
 
 
 const port = process.env.PORT || 8000;

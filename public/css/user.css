@@ -1,0 +1,72 @@
+body {
+    background-color: gainsboro;
+}
+
+.loginSection {
+    /* border: 1px solid black; */
+    width: 70%;
+    height: 80vh;
+    margin: 5rem auto;
+    display: flex;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 1rem;
+
+}
+
+.intro {
+    clip-path: ellipse(100% 80% at 0 50%);
+    background-color: brown;
+    color: whitesmoke;
+    align-content: center;
+}
+.introtext {
+    /* border: 1px solid black; */
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+.intro,
+.login {
+    /* border: 1px solid black; */
+    width: 50%;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    align-content: center;
+}
+
+.login {
+    background-color: white;
+
+}
+
+.login h2 {
+    text-align: center;
+    color: brown;
+}
+
+.login .form {
+    width: 80%;
+    /* border: 1px solid black; */
+    margin: 2rem auto;
+}
+
+.login .form input {
+    background-color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+}
+
+.login .btn {
+    background-color: brown;
+    color: white;
+}
+
+.text-danger {
+    font-size: 13px;
+    margin-top: 2px;
+}
