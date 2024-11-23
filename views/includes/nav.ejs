@@ -11,8 +11,8 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse mb-2 mb-lg-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-5  mb-2 mb-md-0">
+        <div class="collapse navbar-collapse mb-2 mb-md-0 mb-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-5">
                 <li class="nav-item ms-2">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
@@ -55,9 +55,43 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
 
+                <div class="dropdown ms-lg-5 mt-3 mt-md-0 me-4 userOptions align-content-center">
+                    <a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="d-flex">
+                        <i class="fa-solid fa-circle-user fs-2 ms-2"></i>
+                        <% if(user) { %>
+                        <p class="ms-2 mb-0 align-content-center"> <b>Hello, <%= user.username %></b> </p>
+                        <% } %>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end pt-1 pb-1">
+                        <% if(user) { %>
+                            <li><a class="dropdown-item ps-3 pe-1" href="/profile">My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider m-1">
+                            </li>
+                            <li><a class="dropdown-item ps-3 pe-1" href="/logout">Logout</a></li>
+                            <% } %>
+
+                                <% if(!user) { %>
+                                    <li><a class="dropdown-item ps-3 pe-1" href="/login">Login</a></li>
+                                    <li><a class="dropdown-item ps-3 pe-1" href="/signup">Signup</a></li>
+                                    <% } %>
+                    </ul>
+                </div>
+
             </ul>
+
+
+
+            <!-- <% if(!user) { %>
             <a href="/login"><button type="button" class="btn loginBtn ms-5 me-2">Log In</button></a>
+            <% } %>
+
+            <% if(user) { %>
+            <a href="/logout"><button type="button" class="btn loginBtn ms-5 me-2">Logout</button></a>
+            <% } %> -->
 
         </div>
+
     </div>
 </nav>
