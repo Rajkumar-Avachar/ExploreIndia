@@ -13,6 +13,7 @@ const passport = require("passport");
 const passportLocal = require("passport-local");
 const ExpressError = require("./utils/ExpressError.js");
 const { title } = require("process");
+const MongoStore = require('connect-mongo');
 
 
 
@@ -38,18 +39,29 @@ async function main() {
 }
 main();
 
-const sessionOptions = {
-    secret: "thedarkknight",
-    resave: false,
-    saveUninitialized: true,
-    cookie: {
-        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-        httpOnly: true,
-    },
-};
+// const sessionOptions = {
+//     secret: "thedarkknight",
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: {
+//         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+//         maxAge: 7 * 24 * 60 * 60 * 1000,
+//         httpOnly: true,
+//     },
+// };
 
-app.use(session(sessionOptions));
+app.use(session({
+    secret: 'thedarkknight',
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://rajavachar59:exploreindia@explore-india-db.57jx4.mongodb.net/exloreindiadb' }),
+    cookie: {
+        maxAge: 24 * 60 * 60 * 1000, // 1 day
+        secure: true,
+    },
+}));
+
+// app.use(session(sessionOptions));
 app.use(flash());
 
 app.use((req, res, next) => {
@@ -70,8 +82,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/", heritage, culture, user);
-
-
 
 
 
