@@ -54,7 +54,7 @@ app.use(session({
     secret: 'thedarkknight',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb+srv://rajavachar59:exploreindia@explore-india-db.57jx4.mongodb.net/exloreindiadb' }),
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
     cookie: {
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
         maxAge: 7 * 24 * 60 * 60 * 1000,
@@ -83,7 +83,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/", heritage, culture, user);
-
 
 
 app.all("*", (req, res, next) => {
