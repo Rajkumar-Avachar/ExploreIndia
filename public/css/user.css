@@ -93,11 +93,11 @@ a {
     background-color: wheat;
 }
 
-.image {
+.profilePic {
     text-align: center;
 }
 
-.image img {
+.profilePic img {
     width: 15rem;
     box-shadow: none;
     border: none;
@@ -176,7 +176,7 @@ a {
         min-width: 90%;
     }
 
-    .image img {
+    .profilePic img {
         width: 10rem;
     }
 
