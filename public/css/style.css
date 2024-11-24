@@ -72,6 +72,15 @@ a {
     background-color: brown;
     padding: 0.4rem 1.2rem;
 }
+
+.userOptions ul {
+    width: 3rem !important;
+}
+.userOptions .account {
+    color: brown;
+}
+
+
 /* Header */
 
 header {
