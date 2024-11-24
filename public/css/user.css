@@ -75,18 +75,41 @@ a {
 
 /* Profile */
 
-.profile {
-    width: 70%;
-    border: 1px solid black;
-    height: 60vh;
-    margin: 3rem auto;
-    background-color: white;
-    border-radius: 1rem;
+.profileSection {
+    /* border: 1px solid black; */
+    text-align: center;
 }
 
-.userOptions ul {
-    width: 3rem !important;
+.profile {
+    display: inline-block;
+    margin: 3rem auto;
+    border: 1px solid gray;
+    padding: 3rem 5rem;
+    box-shadow: 1px 1px 7px black;
+    border-radius: 1rem;
+    background-color: wheat;
 }
+
+.image {
+    text-align: center;
+}
+
+.image img {
+    width: 15rem;
+    box-shadow: none;
+    border: none;
+}
+
+.userDetails {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.userDetails .btn {
+    color: white;
+    background-color: brown;
+}
+
 
 
 
@@ -110,6 +133,7 @@ a {
     .login {
         padding: 3rem 1rem;
     }
+
     .form div {
         margin-bottom: 8px !important;
     }
@@ -121,11 +145,13 @@ a {
         margin: 3rem auto;
         height: 100%;
     }
+
     .intro,
     .login {
         flex: 0;
         min-width: 100%;
     }
+
     .intro {
         height: 10rem;
         padding: 1rem 0 0 0;
@@ -133,7 +159,40 @@ a {
         border-bottom-right-radius: 1.5rem;
 
     }
+
     .login {
         padding-top: 2rem;
     }
+
+
+    /* Profile */
+
+    .profile {
+        margin: 5rem 1rem;
+        padding: 1rem;
+    }
+
+    .image img {
+        width: 10rem;
+    }
+
+    .userDetails {
+        margin-top: 2rem;
+    }
+
+    .userDetails p {
+        font-size: 1rem !important;
+    }
 }
+
+
+
+
+
+
+
+
+/* 
+.userOptions ul {
+    width: 3rem !important;
+} */

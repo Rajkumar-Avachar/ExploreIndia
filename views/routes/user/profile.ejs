@@ -1,16 +1,28 @@
 <% layout("/layouts/boilerplate") %>
 
-    <body>
+    <body class="profileBody">
 
-        <section class="profile">
+        <section class="profileSection">
 
-            <div class="mt-5 ms-5">
-                <h4>Username: <%= username %>
-                </h4>
-                <h5>Email: <%= email %>
-                </h5>
-            </div>
+            <div class="profile">
+                
+                    <div class="image">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Photo">
+                    </div>
 
+                    <div class="userDetails">
+
+                        <div class="username">
+                            <p class="fs-5">Username: <b>@<%=username%></b></p>
+                            <p class="fs-5">Email: <b><%=email%></b></p>
+                        </div>
+
+                        <a href="/logout"><button class="btn mt-4">LOGOUT</button></a>
+
+                    </div>
+             
 
         </section>
+
+
     </body>
