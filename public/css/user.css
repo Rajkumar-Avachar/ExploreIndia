@@ -79,10 +79,13 @@ a {
     /* border: 1px solid black; */
     text-align: center;
 }
-
+.profileHeading {
+    color: brown;
+    font-size: 2rem;
+}
 .profile {
     display: inline-block;
-    margin: 3rem auto;
+    margin: 2rem auto;
     border: 1px solid gray;
     padding: 3rem 5rem;
     box-shadow: 1px 1px 7px black;
@@ -168,8 +171,9 @@ a {
     /* Profile */
 
     .profile {
-        margin: 5rem 1rem;
-        padding: 1rem;
+        margin: 2rem 1rem;
+        padding: 2rem;
+        min-width: 90%;
     }
 
     .image img {
