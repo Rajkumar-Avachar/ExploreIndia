@@ -1,4 +1,4 @@
-#userBody {
+.userBody {
     background-color: gainsboro;
 }
 
@@ -11,15 +11,15 @@
     background-color: white;
     box-shadow: 1px 1px 10px black;
     border-radius: 1rem;
-
 }
 
 .intro {
-    clip-path: ellipse(100% 80% at 0 50%);
+    /* clip-path: ellipse(100% 80% at 0 50%); */
     background-color: brown;
     color: whitesmoke;
     align-content: center;
 }
+
 .introtext {
     /* border: 1px solid black; */
     width: 70%;
@@ -30,7 +30,7 @@
 .intro,
 .login {
     /* border: 1px solid black; */
-    width: 50%;
+    flex: 1;
     padding: 3rem 2rem;
     border-radius: 1rem;
     align-content: center;
@@ -86,4 +86,44 @@ a {
 
 .userOptions ul {
     width: 3rem !important;
+}
+
+
+
+
+
+/* Media Queries */
+
+@media (width <=1200px) {
+    .loginSection {
+        width: 90%;
+    }
+}
+
+@media (width <=768px) {
+
+    .text-center a {
+        display: block;
+    }
+
+    .intro,
+    .login {
+        padding: 3rem 1rem;
+    }
+    .form div {
+        margin-bottom: 8px !important;
+    }
+}
+
+@media (width <=500px) {
+    .loginSection {
+        flex-wrap: wrap;
+        margin: 3rem auto;
+        height: 100%;
+    }
+    .intro,
+    .login {
+        flex: 0;
+        min-width: 100%;
+    }
 }

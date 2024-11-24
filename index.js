@@ -16,7 +16,6 @@ const { title } = require("process");
 const MongoStore = require('connect-mongo');
 
 
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
@@ -65,10 +64,10 @@ app.use(session({
 // app.use(session(sessionOptions));
 app.use(flash());
 
-app.use((req, res, next) => {
-    res.locals.error = req.flash("error");
-    next();
-});
+// app.use((req, res, next) => {
+    
+//     next();
+// });
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -77,7 +76,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
-    res.locals.success = req.flash.success;
+    res.locals.error = req.flash("error");
     res.locals.user = req.user;
     next();
 });

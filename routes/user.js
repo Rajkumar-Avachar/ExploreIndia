@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require("../models/userSchema.js");
 const wrapAsync = require("../utils/wrapAsync.js");
 const passport = require("passport");
+const ExpressError = require("../utils/ExpressError.js");
 
 
 router.get("/login", (req, res) => {
@@ -25,7 +26,7 @@ router.post("/signup", wrapAsync(async (req, res, next) => {
             res.redirect("/");
         })
     } catch (err) {
-        req.flash("error", err.message);
+        req.flash("error", err.message = "username already exist");
         res.redirect("/signup");
     }
 }));
