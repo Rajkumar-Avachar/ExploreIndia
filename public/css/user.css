@@ -126,4 +126,14 @@ a {
         flex: 0;
         min-width: 100%;
     }
+    .intro {
+        height: 10rem;
+        padding: 1rem 0 0 0;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+
+    }
+    .login {
+        padding-top: 2rem;
+    }
 }
