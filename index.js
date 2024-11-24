@@ -84,6 +84,13 @@ app.use((req, res, next) => {
 app.use("/", heritage, culture, user);
 
 
+
+const heritageAPI = require("./routes/api/heritage.js");
+
+app.use("/api", heritageAPI); // Prefix all API routes with /api
+
+
+
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found"));
 });

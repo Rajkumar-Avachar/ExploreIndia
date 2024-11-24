@@ -23,4 +23,14 @@ router.get("/unescoSites/:id", wrapAsync(async (req, res, next) => {
     };
 }));
 
+
+
+
+// apis
+
+router.get("/unescoSites", wrapAsync(async (req, res) => {
+    const unescosites = await UnescoSite.find();
+    res.json(unescosites); // Send JSON
+}));
+
 module.exports = router;
