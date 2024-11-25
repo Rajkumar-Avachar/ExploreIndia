@@ -13,7 +13,8 @@
 
 #mainHeading {
     margin: 2rem;
-    background-color: burlywood;
+    background-color: brown;
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
 }

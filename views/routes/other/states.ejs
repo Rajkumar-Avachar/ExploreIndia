@@ -1,0 +1,111 @@
+<% layout("/layouts/boilerplate") %>
+
+
+
+    <body>
+
+        <h3 class="mainHeading">States and Union Territories of India</h3>
+
+
+        <main class="statesUTs">
+            <p class="shortIntro">
+                India is a federal union comprising 28 states and 8 union territories. Here's a list of all the
+                states and union territories along with their capitals:
+            </p>
+
+            <div id="statesGrid" class="grid">
+                <!-- States and UTs will be dynamically inserted here -->
+            </div>
+        </main>
+
+
+        <script>
+            const indiaStates = [
+                { name: "Andhra Pradesh", capital: "Amaravati" },
+                { name: "Arunachal Pradesh", capital: "Itanagar" },
+                { name: "Assam", capital: "Dispur" },
+                { name: "Bihar", capital: "Patna" },
+                { name: "Chhattisgarh", capital: "Raipur" },
+                { name: "Goa", capital: "Panaji" },
+                { name: "Gujarat", capital: "Gandhinagar" },
+                { name: "Haryana", capital: "Chandigarh" },
+                { name: "Himachal Pradesh", capital: "Shimla" },
+                { name: "Jharkhand", capital: "Ranchi" },
+                { name: "Karnataka", capital: "Bengaluru" },
+                { name: "Kerala", capital: "Thiruvananthapuram" },
+                { name: "Madhya Pradesh", capital: "Bhopal" },
+                { name: "Maharashtra", capital: "Mumbai" },
+                { name: "Manipur", capital: "Imphal" },
+                { name: "Meghalaya", capital: "Shillong" },
+                { name: "Mizoram", capital: "Aizawl" },
+                { name: "Nagaland", capital: "Kohima" },
+                { name: "Odisha", capital: "Bhubaneswar" },
+                { name: "Punjab", capital: "Chandigarh" },
+                { name: "Rajasthan", capital: "Jaipur" },
+                { name: "Sikkim", capital: "Gangtok" },
+                { name: "Tamil Nadu", capital: "Chennai" },
+                { name: "Telangana", capital: "Hyderabad" },
+                { name: "Tripura", capital: "Agartala" },
+                { name: "Uttar Pradesh", capital: "Lucknow" },
+                { name: "Uttarakhand", capital: "Dehradun" },
+                { name: "West Bengal", capital: "Kolkata" },
+                { name: "Andaman and Nicobar Islands", capital: "Port Blair", type: "Union Territory" },
+                { name: "Chandigarh", capital: "Chandigarh", type: "Union Territory" },
+                { name: "Dadra and Nagar Haveli and Daman and Diu", capital: "Daman", type: "Union Territory" },
+                { name: "Delhi", capital: "New Delhi", type: "Union Territory" },
+                { name: "Jammu and Kashmir", capital: "Srinagar (Summer), Jammu (Winter)", type: "Union Territory" },
+                { name: "Ladakh", capital: "Leh", type: "Union Territory" },
+                { name: "Lakshadweep", capital: "Kavaratti", type: "Union Territory" },
+                { name: "Puducherry", capital: "Puducherry", type: "Union Territory" }
+            ];
+
+            function createStateCard(state) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                <h2>${state.name}</h2>
+                <p><strong>Capital:</strong> ${state.capital}</p>
+                ${state.type ? `<p class="type">${state.type}</p>` : ''}
+            `;
+                return card;
+            }
+
+            function populateStates() {
+                const grid = document.getElementById('statesGrid');
+                indiaStates.forEach(state => {
+                    grid.appendChild(createStateCard(state));
+                });
+            }
+
+            function setCurrentYear() {
+                const yearSpan = document.getElementById('currentYear');
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                populateStates();
+                setCurrentYear();
+            });
+        </script>
+    </body>
+
+
+    <!-- <h3 class="mainHeading">States and Union Territories</h3>
+
+        <p id="statesUtsInfo">India, a union of states, is a Sovereign, Secular, Democratic Republic with a
+            Parliamentary system of
+            Government. The President is the constitutional head of Executive of the Union. In the states, the Governor,
+            as the representative of the President, is the head of Executive. The system of government in states closely
+            resembles that of the Union. There are 28 states and 8 Union territories in the country. Union Territories
+            are administered by the President through an Administrator appointed by him/her. From the largest to the
+            smallest, each State/UT of India has a unique demography, history and culture, dress, festivals, language
+            etc. This section introduces you to the various States/UTs in the Country and urges you to explore their
+            magnificent uniqueness...</p>
+
+        <hr>
+
+        <div class="statesUTs">
+
+        </div> -->
+
+    </body>
