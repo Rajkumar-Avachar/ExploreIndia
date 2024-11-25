@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const heritage = require("./routes/heritage.js");
 const culture = require("./routes/culture.js");
-const states = require("./routes/states.js");
+const other  = require("./routes/other.js");
 const user = require("./routes/user.js");
 const User = require("./models/userSchema.js");
 const session = require("express-session");
@@ -82,7 +82,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/", heritage, culture, user, states);
+app.use("/", heritage, culture, user, other);
 
 
 

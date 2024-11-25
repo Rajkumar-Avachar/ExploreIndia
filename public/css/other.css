@@ -1,0 +1,299 @@
+/* Staes and Uts */
+
+
+.statesUTs {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#stateUTsHeader {
+    background-color: #2563eb;
+    color: white;
+    padding: 24px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    padding: 32px 0;
+}
+
+.shortIntro {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+    /* background-color: brown; */
+    padding: 2rem;
+    color: rgb(129, 15, 15);
+    border-radius: 0.5rem;
+    max-width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+}
+
+.card p {
+    margin: 0;
+    color: #4b5563;
+}
+
+.card .type {
+    font-size: 0.875rem;
+    color: #2563eb;
+    margin-top: 8px;
+}
+
+.official-link {
+    width: 40%;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .shortIntro {
+        padding: 1rem;
+    }
+}
+
+/* About Us */
+
+.aboutUsBody {
+    background-color: white;
+}
+
+.aboutUSHeading {
+    color: brown;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.aboutIntroSection {
+    margin: 3rem 7rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0 3rem 5rem;
+    gap: 5rem;
+    border-radius: 1rem;
+    /* box-shadow: 1px 1px 7px black; */
+}
+
+.titleAndParagraph {
+    margin-top: 2rem;
+
+}
+
+.aboutUsIntroTitle {
+    font-size: 2rem;
+    color: navy;
+    font-weight: bold;
+    text-shadow: 5px 5px 20px gray;
+}
+
+.aboutIntroParagraph {
+    text-align: justify;
+    padding: 0 1.5rem;
+    margin-top: 3rem;
+}
+
+.aboutUsImg {
+    background-color: white;
+    padding: 1rem 3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.aboutUsImg img {
+    width: 20rem;
+    mix-blend-mode: darken;
+}
+
+.vision-mission {
+    /* border: 1px solid black; */
+    margin: 3rem 10rem;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    align-items: center;
+}
+
+.vision-mission-title {
+    font-size: 1.5rem;
+    color: navy;
+    font-weight: bold;
+}
+
+.vision-mission img {
+    width: 25rem;
+
+}
+
+
+/* Contact */
+
+.contactform {
+    margin-top: 10rem;
+}
+
+.contactform h2 {
+    color: brown !important;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px black;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form h2 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+
+@media (max-width: 1200px) {
+    .aboutIntroSection {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .vision-mission {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .aboutIntroSection {
+        gap: 1rem;
+        padding-left: 2rem;
+    }
+
+    .aboutUsImg {
+        padding-left: 0;
+    }
+
+    .vision-mission {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .vision-mission img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .aboutIntroSection,
+    .vision-mission {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem;
+        padding: 0;
+    }
+
+    .aboutUsImg {
+        padding: 0;
+    }
+
+    .vision-mission {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .aboutIntroSection {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form {
+        max-width: 85%;
+    }
+}

@@ -212,7 +212,7 @@ header {
     color: white;
 }
 
-/* Other */
+/* National Identity Elements */
 
 .nationalIdentityElements {
     padding: 3rem 0 5rem;
@@ -227,14 +227,6 @@ header {
     font-weight: bold;
     padding: 0.5rem 0;
 }
-
-/* .elementCards {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 3rem;
-    flex-wrap: wrap;
-} */
 
 .elementCards {
     display: grid;
@@ -275,6 +267,10 @@ header {
     transition: 0.5s;
     box-shadow: 0.1rem 0.1rem 0.8rem black;
 }
+
+
+
+
 
 /* Media Queries */
 
