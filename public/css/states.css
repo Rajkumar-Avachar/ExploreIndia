@@ -33,9 +33,9 @@ main {
 .shortIntro {
     font-size: 1.125rem;
     margin-bottom: 32px;
-    background-color: brown;
+    /* background-color: brown; */
     padding: 2rem;
-    color: white;
+    color: rgb(129, 15, 15);
     border-radius: 0.5rem;
     max-width: 100%;
 }
@@ -78,5 +78,11 @@ main {
 @media (min-width: 1024px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .shortIntro {
+        padding: 1rem;
     }
 }

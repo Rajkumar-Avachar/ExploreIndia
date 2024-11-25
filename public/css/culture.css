@@ -12,7 +12,7 @@ a {
 .mainHeading {
     margin: 3rem;
     background-color: brown;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     border-radius: 1rem;
     color: white;
 }
@@ -225,7 +225,7 @@ hr {
 @media (width < 500px) {
     .mainHeading {
         margin: 3rem 0.5rem;
-        padding: 0.5rem;
+        padding: 1rem;
     }
 
     .religion {
