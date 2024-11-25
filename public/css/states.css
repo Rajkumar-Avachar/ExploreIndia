@@ -69,6 +69,10 @@ main {
     margin-top: 8px;
 }
 
+.official-link {
+    width: 40%;
+}
+
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);

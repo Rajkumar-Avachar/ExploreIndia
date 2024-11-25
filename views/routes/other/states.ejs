@@ -21,52 +21,53 @@
 
         <script>
             const indiaStates = [
-                { name: "Andhra Pradesh", capital: "Amaravati" },
-                { name: "Arunachal Pradesh", capital: "Itanagar" },
-                { name: "Assam", capital: "Dispur" },
-                { name: "Bihar", capital: "Patna" },
-                { name: "Chhattisgarh", capital: "Raipur" },
-                { name: "Goa", capital: "Panaji" },
-                { name: "Gujarat", capital: "Gandhinagar" },
-                { name: "Haryana", capital: "Chandigarh" },
-                { name: "Himachal Pradesh", capital: "Shimla" },
-                { name: "Jharkhand", capital: "Ranchi" },
-                { name: "Karnataka", capital: "Bengaluru" },
-                { name: "Kerala", capital: "Thiruvananthapuram" },
-                { name: "Madhya Pradesh", capital: "Bhopal" },
-                { name: "Maharashtra", capital: "Mumbai" },
-                { name: "Manipur", capital: "Imphal" },
-                { name: "Meghalaya", capital: "Shillong" },
-                { name: "Mizoram", capital: "Aizawl" },
-                { name: "Nagaland", capital: "Kohima" },
-                { name: "Odisha", capital: "Bhubaneswar" },
-                { name: "Punjab", capital: "Chandigarh" },
-                { name: "Rajasthan", capital: "Jaipur" },
-                { name: "Sikkim", capital: "Gangtok" },
-                { name: "Tamil Nadu", capital: "Chennai" },
-                { name: "Telangana", capital: "Hyderabad" },
-                { name: "Tripura", capital: "Agartala" },
-                { name: "Uttar Pradesh", capital: "Lucknow" },
-                { name: "Uttarakhand", capital: "Dehradun" },
-                { name: "West Bengal", capital: "Kolkata" },
-                { name: "Andaman and Nicobar Islands", capital: "Port Blair", type: "Union Territory" },
-                { name: "Chandigarh", capital: "Chandigarh", type: "Union Territory" },
-                { name: "Dadra and Nagar Haveli and Daman and Diu", capital: "Daman", type: "Union Territory" },
-                { name: "Delhi", capital: "New Delhi", type: "Union Territory" },
-                { name: "Jammu and Kashmir", capital: "Srinagar (Summer), Jammu (Winter)", type: "Union Territory" },
-                { name: "Ladakh", capital: "Leh", type: "Union Territory" },
-                { name: "Lakshadweep", capital: "Kavaratti", type: "Union Territory" },
-                { name: "Puducherry", capital: "Puducherry", type: "Union Territory" }
+                { name: "Andhra Pradesh", capital: "Amaravati", link: "https://www.ap.gov.in/" },
+                { name: "Arunachal Pradesh", capital: "Itanagar", link: "https://arunachalpradesh.gov.in/" },
+                { name: "Assam", capital: "Dispur", link: "https://assam.gov.in/" },
+                { name: "Bihar", capital: "Patna", link: "http://state.bihar.gov.in/" },
+                { name: "Chhattisgarh", capital: "Raipur", link: "https://cgstate.gov.in/" },
+                { name: "Goa", capital: "Panaji", link: "https://www.goa.gov.in/" },
+                { name: "Gujarat", capital: "Gandhinagar", link: "https://gujaratindia.gov.in/" },
+                { name: "Haryana", capital: "Chandigarh", link: "https://haryana.gov.in/" },
+                { name: "Himachal Pradesh", capital: "Shimla", link: "https://himachal.nic.in/" },
+                { name: "Jharkhand", capital: "Ranchi", link: "https://www.jharkhand.gov.in/" },
+                { name: "Karnataka", capital: "Bengaluru", link: "https://www.karnataka.gov.in/" },
+                { name: "Kerala", capital: "Thiruvananthapuram", link: "https://kerala.gov.in/" },
+                { name: "Madhya Pradesh", capital: "Bhopal", link: "https://www.mp.gov.in/" },
+                { name: "Maharashtra", capital: "Mumbai", link: "https://www.maharashtra.gov.in/" },
+                { name: "Manipur", capital: "Imphal", link: "https://manipur.gov.in/" },
+                { name: "Meghalaya", capital: "Shillong", link: "https://meghalaya.gov.in/" },
+                { name: "Mizoram", capital: "Aizawl", link: "https://mizoram.gov.in/" },
+                { name: "Nagaland", capital: "Kohima", link: "https://nagaland.gov.in/" },
+                { name: "Odisha", capital: "Bhubaneswar", link: "https://www.odisha.gov.in/" },
+                { name: "Punjab", capital: "Chandigarh", link: "https://punjab.gov.in/" },
+                { name: "Rajasthan", capital: "Jaipur", link: "https://www.rajasthan.gov.in/" },
+                { name: "Sikkim", capital: "Gangtok", link: "https://sikkim.gov.in/" },
+                { name: "Tamil Nadu", capital: "Chennai", link: "https://www.tn.gov.in/" },
+                { name: "Telangana", capital: "Hyderabad", link: "https://www.telangana.gov.in/" },
+                { name: "Tripura", capital: "Agartala", link: "https://tripura.gov.in/" },
+                { name: "Uttar Pradesh", capital: "Lucknow", link: "https://up.gov.in/" },
+                { name: "Uttarakhand", capital: "Dehradun", link: "https://uk.gov.in/" },
+                { name: "West Bengal", capital: "Kolkata", link: "https://wb.gov.in/" },
+                { name: "Andaman and Nicobar Islands", capital: "Port Blair", type: "Union Territory", link: "http://www.andaman.gov.in/" },
+                { name: "Chandigarh", capital: "Chandigarh", type: "Union Territory", link: "http://chandigarh.gov.in/" },
+                { name: "Dadra and Nagar Haveli and Daman and Diu", capital: "Daman", type: "Union Territory", link: "https://daman.nic.in/" },
+                { name: "Delhi", capital: "New Delhi", type: "Union Territory", link: "https://delhi.gov.in/" },
+                { name: "Jammu and Kashmir", capital: "Srinagar (Summer), Jammu (Winter)", type: "Union Territory", link: "https://www.jk.gov.in/" },
+                { name: "Ladakh", capital: "Leh", type: "Union Territory", link: "https://ladakh.nic.in/" },
+                { name: "Lakshadweep", capital: "Kavaratti", type: "Union Territory", link: "https://lakshadweep.gov.in/" },
+                { name: "Puducherry", capital: "Puducherry", type: "Union Territory", link: "https://www.py.gov.in/" }
             ];
 
             function createStateCard(state) {
                 const card = document.createElement('div');
                 card.className = 'card';
                 card.innerHTML = `
-                <h2>${state.name}</h2>
-                <p><strong>Capital:</strong> ${state.capital}</p>
-                ${state.type ? `<p class="type">${state.type}</p>` : ''}
-            `;
+                    <h2>${state.name}</h2>
+                    <p><strong>Capital:</strong> ${state.capital}</p>
+                    ${state.type ? `<p class="type">${state.type}</p>` : ''}
+                    <a href="${state.link}" target="_blank" class="official-link mt-3 text-center btn btn-outline-danger">Visit Portal</a>
+                `;
                 return card;
             }
 
@@ -87,6 +88,7 @@
                 setCurrentYear();
             });
         </script>
+
     </body>
 
 
