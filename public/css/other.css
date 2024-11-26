@@ -38,24 +38,24 @@ main {
     gap: 24px;
 }
 
-.card {
+.stateCard {
     background-color: white;
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
+.stateCard h2 {
     margin: 0 0 8px 0;
     font-size: 1.25rem;
 }
 
-.card p {
+.stateCard p {
     margin: 0;
     color: #4b5563;
 }
 
-.card .type {
+.stateCard .type {
     font-size: 0.875rem;
     color: #2563eb;
     margin-top: 8px;
