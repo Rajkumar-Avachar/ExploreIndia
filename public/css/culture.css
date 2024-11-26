@@ -131,6 +131,145 @@ hr {
     align-content: center;
 }
 
+/* Languages */
+
+
+.languagesHeading {
+    height: 25vh;
+    clip-path: ellipse(100% 50% at 50% 0);
+    background-color: #138808;
+    text-align: center;
+    padding: 2rem 1rem 0 1rem;
+    color: whitesmoke;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+.languageSection {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 5rem;
+}
+
+.language-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+}
+
+.language-card h3 {
+    color: #138808;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .language-grid {
+        grid-template-columns: 1fr;
+    }
+    .language-grid {
+        padding: 0 2rem;
+    }
+}
+
+/* Arts and Dance */
+.artsDanceHeading {
+    height: 25vh;
+    clip-path: ellipse(100% 50% at 50% 0);
+    background-color: burlywood;
+    text-align: center;
+    padding: 2rem 1rem 0 1rem;
+    color: black;
+}
+
+.artsDanceSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+}
+
+.artsDanceSection h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.artsDanceSection h2 {
+    color: brown;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.artsDanceSection .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.artsDanceSection .card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.artsDanceSection .card:hover {
+    transform: translateY(-5px);
+}
+
+.artsDanceSection .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.artsDanceSection .card-content {
+    padding: 20px;
+}
+
+.artsDanceSection .card h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.origin {
+    font-weight: bold;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.artsDanceSection .description {
+    font-size: 0.9em;
+    color: #34495e;
+}
+
+@media (max-width: 768px) {
+    .artsDanceSection .grid {
+        grid-template-columns: 1fr;
+    }
+    .artsDanceSection {
+        padding: 0 1rem 2rem;
+    }
+}
+
+
+
 
 
 /* Media Queries */

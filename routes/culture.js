@@ -14,4 +14,8 @@ router.get("/languages", (req, res) => {
     res.render("routes/culture/languages.ejs", { title: "Explore INDIA | Languages" });
 });
 
+router.get("/artsDance", (req, res) => {
+    res.render("routes/culture/artsDance.ejs", { title: "Explore INDIA | Arts and Dance" });
+});
+
 module.exports = router;
