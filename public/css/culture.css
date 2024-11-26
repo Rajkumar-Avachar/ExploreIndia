@@ -188,7 +188,7 @@ h1 {
 
 /* Arts and Dance */
 .artsDanceHeading {
-    height: 25vh;
+    height: 30vh;
     clip-path: ellipse(100% 50% at 50% 0);
     background-color: burlywood;
     text-align: center;
