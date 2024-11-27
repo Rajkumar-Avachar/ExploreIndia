@@ -1,0 +1,133 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+
+        <h2 class="templesHeading">Famous Forts of India</h2>
+        <main class="fortsSection">
+            <div id="fort-list"></div>
+            <div id="fort-details"></div>
+        </main>
+
+        <script>
+            const forts = [
+                {
+                    name: "Raigad Fort",
+                    location: "Raigad, Maharashtra",
+                    description: "Raigad was the capital of Chhatrapati Shivaji Maharaj, the founder of the Maratha Empire. It is located in the Sahyadri mountain range.",
+                    image: "https://www.citybit.in/wp-content/uploads/2024/07/Raigad-Fort-Photos.jpg"
+                },
+                {
+                    name: "Sinhagad Fort",
+                    location: "Pune, Maharashtra",
+                    description: "Sinhagad is a fortress located roughly 30 kilometers southwest of the city of Pune. It was strategically built to provide natural protection due to its very steep slopes.",
+                    image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/ae/b6/cc.jpg"
+                },
+                {
+                    name: "Pratapgad Fort",
+                    location: "Satara, Maharashtra",
+                    description: "Pratapgad is a large fort located in Satara district, in the Western Indian state of Maharashtra. The fort is now a popular tourist destination.",
+                    image: "https://www.mtdc.co.in/wp-content/uploads/2022/03/Pratapgad-Fort.jpg"
+                },
+                {
+                    name: "Torna Fort",
+                    location: "Pune, Maharashtra",
+                    description: "Torna Fort, also known as Prachandagad, is a large fort located in Pune district, in the Indian state of Maharashtra. It is historically significant because it was the first fort captured by Shivaji in 1643.",
+                    image: "https://www.adventurush.com/wp-content/uploads/2023/07/shutterstock_1817012579-1.jpg"
+                },
+                {
+                    name: "Rajgad Fort",
+                    location: "Pune, Maharashtra",
+                    description: "Rajgad is a hill fort situated in the Pune district of Maharashtra, India. Formerly known as Murumbdev, the fort was the first capital of the Maratha Empire under Chhatrapati Shivaji Maharaj for almost 26 years.",
+                    image: "https://www.bikatadventures.com/images/BlogspotContents/BlogspotImageUrl80486-Bikat-Adventures.png"
+                },
+                {
+                    name: "Vijaydurg Fort",
+                    location: "Sindhudurg, Maharashtra",
+                    description: "Vijaydurg Fort, also known as the 'Victory Fort', is a coastal fort in Maharashtra. It is one of the strongest marine forts of the Maratha Empire.",
+                    image: "https://media-cdn.tripadvisor.com/media/photo-s/05/30/0c/ac/vijaydurg-fort.jpg"
+                },
+                {
+                    name: "Red Fort",
+                    location: "Delhi",
+                    description: "The Red Fort is a historic fort in Old Delhi, built by the Mughal emperor Shah Jahan. It served as the main residence of the emperors of the Mughal dynasty for nearly 200 years.",
+                    image: "https://static.tnn.in/thumb/msid-112394026,thumbsize-1751306,width-1280,height-720,resizemode-75/112394026.jpg"
+                },
+                {
+                    name: "Agra Fort",
+                    location: "Agra, Uttar Pradesh",
+                    description: "Agra Fort is a historical fort in the city of Agra. It was the main residence of the emperors of the Mughal Dynasty until 1638 when the capital was shifted from Agra to Delhi.",
+                    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/01/08/32/agra-fort.jpg?w=1200&h=-1&s=1"
+                },
+                {
+                    name: "Gwalior Fort",
+                    location: "Gwalior, Madhya Pradesh",
+                    description: "Gwalior Fort is a hill fort near Gwalior, Madhya Pradesh. The fort has existed at least since the 10th century, and the inscriptions and monuments found within what is now the fort campus indicate that it may have existed as early as the beginning of the 6th century.",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Gwalior_Fort_front.jpg/640px-Gwalior_Fort_front.jpg"
+                },
+                {
+                    name: "Chittorgarh Fort",
+                    location: "Chittorgarh, Rajasthan",
+                    description: "Chittorgarh Fort is one of the largest forts in India. It was the capital of Mewar and is today situated in Chittorgarh. The fort, plainly known as Chittor, was the capital of Mewar and was founded by the Maurya dynasty.",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Chittorgarh_fort.JPG/1200px-Chittorgarh_fort.JPG"
+                },
+                {
+                    name: "Mehrangarh Fort",
+                    location: "Jodhpur, Rajasthan",
+                    description: "Mehrangarh Fort is one of the largest forts in India. Built in around 1459 by Rao Jodha, the fort is situated 410 feet above the city and is enclosed by imposing thick walls.",
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzVLVpJRxJAFo6cG9oRBbNC9IY3m8qlm1t2g&s"
+                },
+                {
+                    name: "Golconda Fort",
+                    location: "Hyderabad, Telangana",
+                    description: "Golconda Fort is a fortified citadel and an early capital city of the Qutb Shahi dynasty. The fort is known for its acoustic effects, palaces, ingenious water supply system and the famous Fateh Rahben gun.",
+                    image: "https://i0.wp.com/weekendyaari.in/wp-content/uploads/2024/09/weekend-yaari-golkonda.jpg?fit=1024%2C597&ssl=1"
+                },
+                {
+                    name: "Jaisalmer Fort",
+                    location: "Jaisalmer, Rajasthan",
+                    description: "Jaisalmer Fort is situated in the city of Jaisalmer, in the Indian state of Rajasthan. It is believed to be one of the very few 'living forts' in the world, as nearly one fourth of the old city's population still resides within the fort.",
+                    image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/e9/12/73.jpg"
+                },
+                {
+                    name: "Amber Fort",
+                    location: "Jaipur, Rajasthan",
+                    description: "Amber Fort is known for its artistic style elements. With its large ramparts and series of gates and cobbled paths, the fort overlooks Maota Lake. It is the principal tourist attraction in Jaipur.",
+                    image: "https://www.fabhotels.com/blog/wp-content/uploads/2021/05/Amer_Fort_600x400.jpg"
+                },
+                {
+                    name: "Kangra Fort",
+                    location: "Kangra, Himachal Pradesh",
+                    description: "Kangra Fort is located 20 kilometers from the town of Dharamsala on the outskirts of the town of Kangra, India. The fort was first mentioned in Alexander the Great's war records, referring to the 4th century BC.",
+                    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/3a/72/60/photo7jpg.jpg?w=1200&h=-1&s=1"
+                }
+            ];
+
+            function displayFortList() {
+                const fortList = document.getElementById('fort-list');
+                forts.forEach(fort => {
+                    const fortItem = document.createElement('div');
+                    fortItem.classList.add('fort-item');
+                    fortItem.textContent = fort.name;
+                    fortItem.addEventListener('click', () => displayFortDetails(fort));
+                    fortList.appendChild(fortItem);
+                });
+            }
+
+            function displayFortDetails(fort) {
+                const fortDetails = document.getElementById('fort-details');
+                fortDetails.innerHTML = `
+        <div class="fort-details">
+            <h3>${fort.name}</h3>
+            <img src="${fort.image}" alt="${fort.name}">
+            <p><strong>Location:</strong> ${fort.location}</p>
+            <p>${fort.description}</p>
+        </div>
+    `;
+            }
+
+            window.addEventListener('load', () => {
+                displayFortList();
+                displayFortDetails(forts[0]); // Display the first fort by default
+            });
+        </script>
+    </body>

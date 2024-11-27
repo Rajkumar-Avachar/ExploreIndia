@@ -25,7 +25,7 @@ app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
-// require('dotenv').config();
+require('dotenv').config();
 
 async function main() {
     const mongoURI = process.env.MONGO_URI;

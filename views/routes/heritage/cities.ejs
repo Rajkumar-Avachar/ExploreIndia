@@ -1,0 +1,81 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+
+        <h2 class="templesHeading">Historic Cities of India</h2>
+
+        <div class="citiesSection pt-0">
+            
+            <div class="cityContent">
+                <ul id="cityList" class="city-list"></ul>
+                <div id="cityDetails" class="city-details"></div>
+            </div>
+        </div>
+
+        <script>
+            const cities = [
+                {
+                    name: "Jaipur",
+                    description: "Known as the 'Pink City', Jaipur is famous for its stunning architecture, including the Hawa Mahal and City Palace.",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg/640px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg"
+                },
+                {
+                    name: "Varanasi",
+                    description: "One of the oldest continuously inhabited cities in the world, Varanasi is a holy city known for its ghats along the Ganges River.",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg/640px-Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg"
+                },
+                {
+                    name: "Hampi",
+                    description: "A UNESCO World Heritage Site, Hampi was the capital of the Vijayanagara Empire and is known for its stunning ruins and boulder-strewn landscape.",
+                    image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSkrEg2Xv0azC4PICjl8Ol9BtlXiYtTcDsLqLb4Kx1zUDHTEIVNcZapMSTjK_s5psjuy8vhc3-okVHtWLeoMJgUXOZiJz-ZH025U44HRA"
+                },
+                {
+                    name: "Agra",
+                    description: "Home to the iconic Taj Mahal, Agra was the capital of the Mughal Empire and boasts several other architectural marvels.",
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg/640px-Taj_Mahal%2C_Agra%2C_India_edit3.jpg"
+                },
+                {
+                    name: "Udaipur",
+                    description: "Known as the 'City of Lakes', Udaipur is famous for its palaces, including the Lake Palace on Lake Pichola.",
+                    image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTw7_x9KF3YngQm7BxOOUZp1Nd5bTngdextr2eeL9OvW2EtFasu3cgGo-01lDZahPf0mLg2TBZClPQwSRgFxfk82qwViDc-qPV23QYfTQ"
+                },
+                {
+                    name: "Mysore",
+                    description: "Mysore is renowned for its glittering royal heritage and magnificent monuments and buildings, including the Mysore Palace.",
+                    image: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSe0xSNdULGUwV2DOMmCFuuNWPTB_qT5kNFD_0FnT7OOZZ6tqvYupRMWVvRiELh3KMjT32WlY1jVcxuOarz7DBpPVX3UgMP6aAIdmGJmA"
+                },
+                {
+                    name: "Kolkata",
+                    description: "Formerly known as Calcutta, Kolkata is known for its grand colonial architecture, art galleries and cultural festivals.",
+                    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTRh613zlRTVvLDY7tqJY7yKTE2PKq9et70kn3Jo6cbgQwYRvvKFnXknQ9x_Iw13UWfKjX2LdvC-xCInmht4Q3be9ZZD_HTCpLMv4QVxQ"
+                }
+            ];
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const cityList = document.getElementById('cityList');
+                const cityDetails = document.getElementById('cityDetails');
+
+                // Populate the city list
+                cities.forEach(city => {
+                    const li = document.createElement('li');
+                    li.textContent = city.name;
+                    li.addEventListener('click', () => showCityDetails(city));
+                    cityList.appendChild(li);
+                });
+
+                // Function to display city details
+                function showCityDetails(city) {
+                    cityDetails.innerHTML = `
+            <h3>${city.name}</h3>
+            <img src="${city.image}" alt="${city.name}">
+            <p>${city.description}</p>
+        `;
+                }
+
+                // Show the first city's details by default
+                showCityDetails(cities[0]);
+            });
+        </script>
+
+
+    </body>

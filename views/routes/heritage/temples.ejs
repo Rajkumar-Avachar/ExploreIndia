@@ -1,0 +1,121 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+
+        <h3 class="templesHeading mb-0">Ancient Temples of India</h3>
+
+        <main class="templesSection mt-0">
+            <div class="templesContainer">
+
+                <div id="temple-grid"></div>
+
+            </div>
+        </main>
+
+        <script>
+            const temples = [
+                {
+                    id: "7",
+                    name: "Jagannath Temple",
+                    location: "Puri, Odisha",
+                    description: "A 12th-century temple dedicated to Lord Jagannath, known for its annual Rath Yatra festival.",
+                    imageUrl: "https://www.tripsavvy.com/thmb/CqvMyrnnVy5fNLFYTr5zW13s-XE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/_DSC0713_Snapseed_Darkroom-819d0b229974460e8141622c4494e2ed.jpg",
+                },
+                {
+                    id: "8",
+                    name: "Padmanabhaswamy Temple",
+                    location: "Thiruvananthapuram, Kerala",
+                    description: "A Vaishnavite temple dedicated to Lord Vishnu, known for its Dravidian architecture and vast treasure.",
+                    imageUrl: "https://assets.gqindia.com/photos/5f0ec391532fa7831d9d6e81/16:9/w_2560%2Cc_limit/Everything-you-need-to-know-about-the-world's-richest-temple-Sree-Padmanabhaswamy-and-its-treasures-worth-Rs-1%2C00%2C000-crore.jpg",
+                },
+                {
+                    id: "9",
+                    name: "Kedarnath Temple",
+                    location: "Kedarnath, Uttarakhand",
+                    description: "A Hindu temple dedicated to Lord Shiva, located in the Himalayas and part of the Char Dham pilgrimage circuit.",
+                    imageUrl: "https://i0.wp.com/weekendyaari.in/wp-content/uploads/2024/03/Kedarnath-Temple-Best-Time-to-Visit-Timings-History-and-OpeningClosing-Dates.webp?fit=740%2C455&ssl=1",
+                },
+                {
+                    id: "1",
+                    name: "Brihadeeswara Temple",
+                    location: "Thanjavur, Tamil Nadu",
+                    description: "A magnificent example of Dravidian architecture, built by Raja Raja Chola I in 1010 CE.",
+                    imageUrl: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ--laH94OkiAolstn3sLW0eZGnkOYP-sg6TyRIuBdc2R1kn7qXhe7bI6oAqtnOZbJhid61wNIXmMSDorC0t5o2-LBczwrh6lVSmRgN0A",
+                },
+                {
+                    id: "2",
+                    name: "Konark Sun Temple",
+                    location: "Konark, Odisha",
+                    description: "A 13th-century temple dedicated to the sun god, known for its intricate stone carvings.",
+                    imageUrl: "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRSB-spnLY1YcJKmqhUVgiaC7rXbZDeNgGA-uNZU_Tv20gUW23D9FtqKb6F8SK2Wjv8Xd75e10YB_OQ5xGrgZtALm1n0djGPpSmvWMIjA",
+                },
+                {
+                    id: "3",
+                    name: "Khajuraho Group of Monuments",
+                    location: "Khajuraho, Madhya Pradesh",
+                    description: "A group of Hindu and Jain temples known for their Nagara-style architectural symbolism and erotic sculptures.",
+                    imageUrl: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTyxwuoMzrr5kLEaqx_eBL5JG2oF8-dUV5rE8WQGokAfEqCGK00dj65LGiIwfFIR2CJze4r9eWhD_K_G0b2gIfyJceIIanvyzZkDgkZCQ",
+                },
+                {
+                    id: "4",
+                    name: "Meenakshi Amman Temple",
+                    location: "Madurai, Tamil Nadu",
+                    description: "A historic Hindu temple dedicated to Meenakshi (Parvati) and Sundareswarar (Shiva).",
+                    imageUrl: "https://media.licdn.com/dms/image/v2/D5612AQE4_ablUz54Mw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1692559182748?e=2147483647&v=beta&t=8ZAQtcZ44tPjujgnrnb2ZlX4q1NjhXpIth9m07hp97M",
+                },
+                {
+                    id: "5",
+                    name: "Virupaksha Temple",
+                    location: "Hampi, Karnataka",
+                    description: "A 7th-century temple dedicated to Shiva, known for its intricate carvings and massive gopuram.",
+                    imageUrl: "https://cdn.britannica.com/36/250236-050-96BFE0EE/Virupaksha-Temple-Hampi-Karnataka-India.jpg",
+                },
+                {
+                    id: "6",
+                    name: "Kailasanatha Temple",
+                    location: "Ellora, Maharashtra",
+                    description: "A massive rock-cut temple dedicated to Shiva, carved out of a single rock in the 8th century.",
+                    imageUrl: "https://www.marathwadatourism.com/en/wp-content/uploads/2022/08/Kailasa-Temple.jpg",
+                },
+                {
+                    id: "10",
+                    name: "Somnath Temple",
+                    location: "Prabhas Patan, Gujarat",
+                    description: "A pilgrimage site on the shore of the Arabian Sea, dedicated to the Jyotirlinga incarnation of Lord Shiva.",
+                    imageUrl: "https://www.templeduniya.com/wp-content/uploads/2021/10/SOMNATH_TEMPLE-min.jpg",
+                },
+            ];
+
+            function createTempleCard(temple) {
+                const card = document.createElement('div');
+                card.className = 'temple-card';
+                card.innerHTML = `
+        <img src="${temple.imageUrl}" alt="${temple.name}" width="300" height="200">
+        <div class="temple-card-content">
+            <h3>${temple.name}</h3>
+            <p class="location">${temple.location}</p>
+            <p>${temple.description}</p>
+        </div>
+    `;
+                return card;
+            }
+
+            function displayTemples() {
+                const templeGrid = document.getElementById('temple-grid');
+                temples.forEach(temple => {
+                    const card = createTempleCard(temple);
+                    templeGrid.appendChild(card);
+                });
+            }
+
+            function setCurrentYear() {
+                const currentYearSpan = document.getElementById('current-year');
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                displayTemples();
+                setCurrentYear();
+            });
+        </script>
+    </body>

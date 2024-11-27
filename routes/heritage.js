@@ -23,6 +23,18 @@ router.get("/unescoSites/:id", wrapAsync(async (req, res, next) => {
     };
 }));
 
+router.get("/temples", (req, res) => {
+    res.render("routes/heritage/temples.ejs", { title: "Ancient Temples" });
+});
+
+router.get("/forts", (req, res) => {
+    res.render("routes/heritage/forts.ejs", { title: "Forts in INDIA" });
+});
+
+router.get("/cities", (req, res) => {
+    res.render("routes/heritage/cities.ejs", { title: "Historic Cities of INDIA" });
+});
+
 
 
 
