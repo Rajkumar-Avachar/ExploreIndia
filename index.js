@@ -25,13 +25,13 @@ app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
-// require('dotenv').config();
+require('dotenv').config();
 
 async function main() {
     const mongoURI = process.env.MONGO_URI;
 
     try {
-        await mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect(mongoURI);
         console.log("Connected to MongoDB Atlas successfully!");
     } catch (err) {
         console.error("Error connecting to MongoDB:", err);
