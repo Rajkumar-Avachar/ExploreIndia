@@ -56,7 +56,7 @@ main();
 app.use(session({
     secret: 'thedarkknight',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
     cookie: {
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
