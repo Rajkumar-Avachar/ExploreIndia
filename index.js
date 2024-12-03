@@ -1,3 +1,7 @@
+if(process.env.NODE_ENV != "production") {
+    require('dotenv').config();
+}
+
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -25,7 +29,6 @@ app.engine("ejs", ejsMate);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
-// require('dotenv').config();
 
 async function main() {
     const mongoURI = process.env.MONGO_URI;
