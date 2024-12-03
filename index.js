@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV != "production") {
     require('dotenv').config();
 }
 
@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const heritage = require("./routes/heritage.js");
 const culture = require("./routes/culture.js");
-const other  = require("./routes/other.js");
+const other = require("./routes/other.js");
 const user = require("./routes/user.js");
 const User = require("./models/userSchema.js");
 const session = require("express-session");
@@ -42,34 +42,28 @@ async function main() {
 }
 main();
 
-// const sessionOptions = {
-//     secret: "thedarkknight",
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: {
-//         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
-//         maxAge: 7 * 24 * 60 * 60 * 1000,
-//         httpOnly: true,
-//     },
-// };
 
 app.use(session({
-    secret: 'thedarkknight',
+    secret: process.env.SECRET_CODE,
     resave: false,
-    saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
+    saveUninitialized: false,
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGO_URI,
+        touchAfter: 24 * 3600,
+    }),
     cookie: {
-        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
         maxAge: 7 * 24 * 60 * 60 * 1000,
         httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
     },
 }));
+
 
 // app.use(session(sessionOptions));
 app.use(flash());
 
 // app.use((req, res, next) => {
-    
+
 //     next();
 // });
 
