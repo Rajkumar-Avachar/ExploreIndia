@@ -59,10 +59,6 @@ app.use(session({
 
 app.use(flash());
 
-// app.use((req, res, next) => {
-
-//     next();
-// });
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -82,7 +78,7 @@ app.use("/", heritage, culture, user, other);
 
 const heritageAPI = require("./routes/api/heritage.js");
 
-app.use("/api", heritageAPI); // Prefix all API routes with /api
+app.use("/api", heritageAPI);
 
 
 
