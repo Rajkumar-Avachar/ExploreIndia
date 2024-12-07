@@ -13,7 +13,6 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const passportLocal = require("passport-local");
 const ExpressError = require("./utils/ExpressError.js");
-const { title } = require("process");
 const MongoStore = require('connect-mongo');
 
 if (process.env.NODE_ENV != "production") {
