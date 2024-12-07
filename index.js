@@ -20,7 +20,6 @@ if (process.env.NODE_ENV != "production") {
     require('dotenv').config();
 }
 
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
@@ -44,10 +43,16 @@ main();
 
 
 app.use(session({
+    store: MongoStore.create({
+        mongoUrl: MONGO_URI,
+        crypto: {
+            secret: "thedarkknight"
+        },
+        touchAfter: 24 * 3600,
+    }),
     secret: 'thedarkknight',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
     cookie: {
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
         maxAge: 7 * 24 * 60 * 60 * 1000,
