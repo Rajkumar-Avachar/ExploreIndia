@@ -44,7 +44,7 @@ main();
 
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: MONGO_URI,
+        mongoUrl: process.env.MONGO_URI,
         crypto: {
             secret: "thedarkknight"
         },
