@@ -43,7 +43,7 @@ main();
 
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: process.env.MONGO_URI,
+        mongoUrl: MONGO_URI,
         crypto: {
             secret: "thedarkknight"
         },
@@ -51,20 +51,13 @@ app.use(session({
     }),
     secret: 'thedarkknight',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     cookie: {
+        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
         maxAge: 7 * 24 * 60 * 60 * 1000,
-        expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
     },
 }));
-
-app.use((req, res, next) => {
-    console.log("Session ID:", req.sessionID);  // Log session ID
-    console.log("Session Data:", req.session); // Log session data
-    next();
-});
 
 
 
