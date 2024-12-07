@@ -1,7 +1,3 @@
-if (process.env.NODE_ENV != "production") {
-    require('dotenv').config();
-}
-
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -19,6 +15,10 @@ const passportLocal = require("passport-local");
 const ExpressError = require("./utils/ExpressError.js");
 const { title } = require("process");
 const MongoStore = require('connect-mongo');
+
+if (process.env.NODE_ENV != "production") {
+    require('dotenv').config();
+}
 
 
 app.set("view engine", "ejs");
