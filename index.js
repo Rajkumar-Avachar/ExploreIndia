@@ -61,6 +61,12 @@ app.use(session({
     },
 }));
 
+app.use((req, res, next) => {
+    console.log("Session ID:", req.sessionID);  // Log session ID
+    console.log("Session Data:", req.session); // Log session data
+    next();
+});
+
 
 
 app.use(flash());
