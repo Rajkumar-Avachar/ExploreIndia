@@ -18,9 +18,6 @@ router.get("/cities", controllers.cities);
 
 
 
-
-
-
 // apis
 
 router.get("/unescoSites", wrapAsync(async (req, res) => {
