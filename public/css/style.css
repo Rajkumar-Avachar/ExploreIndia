@@ -12,7 +12,6 @@ a {
 .navbar {
     /* background: linear-gradient(rgb(246, 115, 67), white, rgb(62, 249, 62)); */
     background-color: gainsboro;
-    border-bottom: 0.5px solid black;
     width: 100%;
 }
 
