@@ -43,14 +43,19 @@
     font-weight: bold;
 }
 
-.siteNames a:hover {
-    color: navy;
+.siteNames a {
+    color: black;
+    opacity: 0.8;
 }
 
 .siteNames li {
     transition: 0.5s;
     font-weight: 500;
     line-height: 1.5rem;
+}
+
+.siteNames a:hover {
+    opacity: 1;
 }
 
 
