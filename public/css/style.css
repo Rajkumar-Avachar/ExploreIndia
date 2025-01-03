@@ -13,6 +13,7 @@ a {
     /* background: linear-gradient(rgb(246, 115, 67), white, rgb(62, 249, 62)); */
     background-color: gainsboro;
     width: 100%;
+    box-shadow: 0 0 5px black;
 }
 
 .navLogo {
